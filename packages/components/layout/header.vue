@@ -1,15 +1,19 @@
 <template>
     <div>
         <header v-show="show">
-            <solt></solt>
+            <slot></slot>
         </header>
     </div>
 </template>
 
 <script>
     export default {
+        name: 'MtHeader',
         props: {
-            show: Boolean
+            show: {
+                default: true,
+                type: Boolean
+            }
         }
     }
 </script>

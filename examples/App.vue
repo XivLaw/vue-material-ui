@@ -2,6 +2,7 @@
   <div id="app">
     <img src="./assets/logo.png">
     <router-view/>
+    <mt-header>123</mt-header>
   </div>
 </template>
 

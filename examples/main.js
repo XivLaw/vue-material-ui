@@ -3,6 +3,9 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import MtAdmin from '../packages/index';
+
+Vue.use(MtAdmin)
 
 Vue.config.productionTip = false
 
