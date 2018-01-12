@@ -1,6 +1,8 @@
 import Style from './styles/index.less'
 
-import Header from './components/header'
+import {
+    Header
+} from './components'
 
 const components = {
     Header,
