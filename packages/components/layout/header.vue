@@ -47,37 +47,42 @@
         div{
             float: left;
             line-height: 20px;
-            &.mt-burger{
-                position: relative;
+        }
+        .mt-burger{
+            position: relative;
+            width: 18px;
+            margin:4px 20px 0 10px;
+            span{
+                position: absolute;
+                display: block;
                 width: 18px;
-                margin:4px 10px 0 0;
-                span{
-                    position: absolute;
-                    display: block;
-                    width: 18px;
-                    height: 2px;
-                    transition: all;
-                    -webkit-transition-duration: .3s;
-                    transition-duration: .3s;
-                    background-color: #fff;
-                    &.mt-line-top{
-                        top:0px;
-                    }
-                    &.mt-line-center{
-                        top:5px;
-                    }
-                    &.mt-line-bottom{
-                        top:10px;
-                    }
+                height: 2px;
+                transition: all;
+                -webkit-transition-duration: .3s;
+                transition-duration: .3s;
+                background-color: #fff;
+                &.mt-line-top{
+                    top:0px;
+                }
+                &.mt-line-center{
+                    top:5px;
+                }
+                &.mt-line-bottom{
+                    top:10px;
                 }
             }
-            &.mt-logo {
-                text-transform: uppercase;
-                font-size: 16px;
-                a{
-                    color:#FFFFFF;
-                }
+        }
+        .mt-logo {
+            text-transform: uppercase;
+            font-size: 16px;
+            a{
+                color:#FFFFFF;
             }
+        }
+    }
+    @media all{
+        .mt-burger {
+            display: none;
         }
     }
     @media (max-width: 1279px){
