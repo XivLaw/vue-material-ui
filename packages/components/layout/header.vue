@@ -1,14 +1,16 @@
 <template>
     <div>
         <header v-show="show">
-            <span class="mt-burger">
-
-            </span>
-            <span class="mt-logo">
+            <div class="mt-burger">
+                <span class="mt-line-top"></span>
+                <span class="mt-line-center"></span>
+                <span class="mt-line-bottom"></span>
+            </div>
+            <div class="mt-logo">
                 <router-link to="/">
                     {{logoStr}}
                 </router-link>
-            </span>
+            </div>
         </header>
     </div>
 </template>
@@ -32,7 +34,7 @@
 <style scoped lang="less">
     header {
         box-shadow: 0 1px 4px rgba(0,0,0,.3);
-        min-height: 70px;
+        min-height: 45px;
         user-select: none;
         position: fixed;
         z-index: 11;
@@ -40,17 +42,36 @@
         left: 0;
         top: 0;
         padding: 0 20px;
+        padding-top: 25px;
         background-color: #2196F3;
-        span{
-            display: block;
-            height: 36px;
-            line-height: 36px;
-            margin: 17px 0;
+        div{
+            float: left;
+            line-height: 20px;
             &.mt-burger{
-                display: none;
+                position: relative;
+                width: 18px;
+                margin:4px 10px 0 0;
+                span{
+                    position: absolute;
+                    display: block;
+                    width: 18px;
+                    height: 2px;
+                    transition: all;
+                    -webkit-transition-duration: .3s;
+                    transition-duration: .3s;
+                    background-color: #fff;
+                    &.mt-line-top{
+                        top:0px;
+                    }
+                    &.mt-line-center{
+                        top:5px;
+                    }
+                    &.mt-line-bottom{
+                        top:10px;
+                    }
+                }
             }
             &.mt-logo {
-                float: left;
                 text-transform: uppercase;
                 font-size: 16px;
                 a{
@@ -60,7 +81,7 @@
         }
     }
     @media (max-width: 1279px){
-        .hi-trigger {
+        .mt-burger {
             display: block;
         }
         .mt-logo {
