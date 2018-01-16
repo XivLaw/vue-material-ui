@@ -124,9 +124,4 @@
             display: block;
         }
     }
-    @media (max-width: 767px){
-        .mt-logo {
-            display: none;
-        }
-    }
 </style>
