@@ -1,9 +1,11 @@
 import Style from './styles/index.less'
 
 import Header from './components/header'
+import Aside from './components/Aside'
 
 const components = {
     Header,
+    Aside
 }
 
 //组件注册方法
