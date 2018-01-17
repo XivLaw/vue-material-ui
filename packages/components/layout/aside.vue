@@ -1,6 +1,6 @@
 <template>
     <div>
-        <aside></aside>
+        <aside>123</aside>
     </div>
 </template>
 
@@ -8,9 +8,9 @@
     export default {
         name: 'MtAside',
         props: {
-            head: {
+            headImg: {
                 required: true,
-                type: 'String'
+                type: String
             }
         }
     }
@@ -20,7 +20,7 @@
     aside{
         position: fixed;
         background: #fff;
-        height: calc(100% - 70px);
+        height: calc(~"100% - 70px");
         top: 70px;
         transition: all;
         -webkit-transition-duration: .3s;

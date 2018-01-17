@@ -1,3 +1,3 @@
-import Aside from '../layout/header'
+import Aside from '../layout/aside'
 
 export default Aside
