@@ -1,18 +1,16 @@
 <template>
-    <div>
-        <header v-show="show">
-            <div class="mt-burger" :class="{'mt-burger-click':burgerOpen}"  @click="burgerClick">
-                <span class="mt-line-top"></span>
-                <span class="mt-line-center"></span>
-                <span class="mt-line-bottom"></span>
-            </div>
-            <div class="mt-logo">
-                <router-link to="/">
-                    {{logoStr}}
-                </router-link>
-            </div>
-        </header>
-    </div>
+    <header v-show="show">
+        <div class="mt-burger" :class="{'mt-burger-click':burgerOpen}"  @click="burgerClick">
+            <span class="mt-line-top"></span>
+            <span class="mt-line-center"></span>
+            <span class="mt-line-bottom"></span>
+        </div>
+        <div class="mt-logo">
+            <router-link to="/">
+                {{logoStr}}
+            </router-link>
+        </div>
+    </header>
 </template>
 
 <script>
