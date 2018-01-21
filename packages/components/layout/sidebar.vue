@@ -4,7 +4,6 @@
                 <span class="profile-img">
                     <img :src="headImg">
                 </span>
-                <span class="zmdi zmdi-home"></span>
             </div>
         </aside>
 </template>
