@@ -1,11 +1,11 @@
 import Style from './styles/index.less'
 
 import Header from './components/header'
-import Aside from './components/aside'
+import Sidebar from './components/sidebar'
 
 const components = {
     Header,
-    Aside
+    Sidebar
 }
 
 //组件注册方法
@@ -24,5 +24,5 @@ const API = {
     install,
     ...components
 }
-  
+
 export default API

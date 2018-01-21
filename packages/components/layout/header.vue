@@ -35,6 +35,16 @@
             burgerClick () {
                 this.burgerOpen = !this.burgerOpen
             }
+        },
+        watch: {
+            burgerOpen(curVal,oldVal) {
+                let el = document.querySelector('#sidebar')
+                if(curVal && el){
+                    el.classList.add('sidebar-show')
+                }else{
+                    el.classList.remove('sidebar-show')
+                }
+            }
         }
     }
 </script>
@@ -45,6 +55,7 @@
         user-select: none;
         position: fixed;
         z-index: 11;
+        min-height: 70px;
         width: 100%;
         left: 0;
         top: 0;
