@@ -1,4 +1,3 @@
-import zmdi from 'material-design-iconic-font/dist/css/material-design-iconic-font.min.css'
 import Style from './styles/index.less'
 
 import Header from './components/header'
