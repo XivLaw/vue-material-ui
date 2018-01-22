@@ -1,5 +1,5 @@
 <template>
-    <header v-show="show">
+    <header>
         <div class="mt-burger" :class="{'mt-burger-click':burgerOpen}"  @click="burgerClick">
             <span class="mt-line-top"></span>
             <span class="mt-line-center"></span>
@@ -22,10 +22,6 @@
             }
         },
         props: {
-            show: {
-                default: true,
-                type: Boolean
-            },
             logoStr: {
                 required: true,
                 type: String

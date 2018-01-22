@@ -2,7 +2,11 @@
   <div id="app">
     <router-view/>
     <mt-header logoStr="Material Admin"></mt-header>
-    <mt-sidebar :headImg="headImg" :headBg="headBg"></mt-sidebar>
+    <mt-sidebar 
+      :headImg="headImg" 
+      :headBg="headBg" 
+      userName="XivLaw"
+    ></mt-sidebar>
   </div>
 </template>
 
