@@ -4,10 +4,10 @@
     {{$route.state}}
     <mt-header logoStr="Material Admin"></mt-header>
     <mt-sidebar 
-    :headImg="this.$store.state.headImg" 
-    :headBg="this.$store.state.headBg"
-    :menuData="this.$store.state.menuData" 
-    userName="XivLaw"
+      :headImg="this.$store.state.headImg" 
+      :headBg="this.$store.state.headBg"
+      :menuData="this.$store.state.menuData" 
+      userName="XivLaw"
     ></mt-sidebar>
   </div>
 </template>

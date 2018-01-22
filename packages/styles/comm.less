@@ -4,6 +4,22 @@
 	-moz-box-sizing:border-box;
 	box-sizing:border-box
 }
+::-webkit-scrollbar {
+	display: inline-flex;
+	width: 2px;
+}
+::-webkit-scrollbar-track {
+	border-radius: 10px;
+	background: #FFFFFF;
+}
+
+::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	background: #888888;
+}
+::-webkit-scrollbar-thumb:window-inactive {
+	background: rgba(100,100,100,0.2); 
+}
 hr,img {
 	border:0
 }
@@ -121,12 +137,6 @@ blockquote,img,pre,tr {
 }
 a,a:visited {
 	text-decoration:underline
-}
-a[href]:after {
-	content:" (" attr(href) ")"
-}
-abbr[title]:after {
-	content:" (" attr(title) ")"
 }
 a[href^="javascript:"]:after,a[href^="#"]:after {
 	content:""
