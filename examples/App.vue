@@ -1,26 +1,21 @@
 <template>
   <div id="app">
     <router-view/>
+    {{$route.state}}
     <mt-header logoStr="Material Admin"></mt-header>
     <mt-sidebar 
-      :headImg="headImg" 
-      :headBg="headBg" 
-      userName="XivLaw"
+    :headImg="this.$store.state.headImg" 
+    :headBg="this.$store.state.headBg"
+    :menuData="this.$store.state.menuData" 
+    userName="XivLaw"
     ></mt-sidebar>
   </div>
 </template>
 
 <script>
-  import headImg from './assets/head.jpg'
-  import headBg from './assets/head-bg.jpg'
+  
 
   export default {
-    name: 'app',
-    data() {
-      return {
-        headImg,
-        headBg
-      }
-    },
+    name: 'app'
   }
 </script>

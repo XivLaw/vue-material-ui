@@ -10,13 +10,20 @@
             </div>
             <ul class="sidebar-menu">
                 <li 
-                    v-for="(val, key) in menu" 
-                    :class="{'sub-menu': val.haveChild, 'open': val.open}"
+                v-for="(val, key) in menu" 
+                :class="{'sub-menu': val.haveChild, 'open': val.open, 'active': path == val.src}"
                 >
-                    <a href="#" @click="menuOpne(key)">
+                    <a href="#" @click="val.haveChild && menuOpne(key)">
                         <span :class="['zmdi', `zmdi-${val.icon}`]"></span>
-                        {{key}}
+                        {{val.name}}
                     </a>
+                    <ul v-if="val.haveChild" 
+                    :style="{height: val.open ? `${Object.keys(val.childs).length * 40}px` : `0px`}"
+                    >
+                        <li v-for="(v, k) in val.childs" :class="{'active': path == v}">
+                            <a href="#">{{v.name}}</a>
+                        </li>
+                    </ul>
                 </li>
             </ul>
         </aside>
@@ -27,26 +34,8 @@
         name: 'MtSidebar',
         data() {
             return {
-                menu: {
-                    'Home': {
-                        src: '/',
-                        icon: 'home',
-                        open: false,
-                        childs: {},
-                        haveChild: false
-                        
-                    },
-                    'Headers': {
-                        src: '/headers',
-                        icon: 'view-compact',
-                        open: false,
-                        childs: {
-                            'Textual menu': '/textual-menu',
-                            'Image logo': '/image-logo'
-                        },
-                        haveChild: true
-                    }
-                }
+                menu: this.menuData,
+                path: location.pathname
             }
         },
         props: {
@@ -61,6 +50,10 @@
             headBg: {
                 required: true,
                 type: String
+            },
+            menuData: {
+                required: true,
+                type: Object
             }
         },
         methods: {
@@ -120,8 +113,29 @@
             padding-left: 0;
             margin: 20px 0 0;
             li{
+                a{
+                    position: relative;
+                    padding: 14px 20px 14px 65px;
+                    display: block;
+                    font-weight: 500;
+                    color: #4C4C4C;
+                    -webkit-transition: color;
+                    -o-transition: color;
+                    transition: color;
+                    -webkit-transition-duration: .3s;
+                    transition-duration: .3s;
+                    span{
+                        position: absolute;
+                        left: 25px;
+                        font-size: 20px;
+                        top: 0;
+                        width: 25px;
+                        text-align: center;
+                        padding: 13px 0;
+                    }
+                }
                 &.sub-menu{
-                    a{
+                    &>a{
                         &::after,&::before{
                             position: absolute;
                             top: 50%;
@@ -150,9 +164,31 @@
                             transform: scale(1);
                         }
                     }
+                    ul{
+                        overflow: hidden;
+                        list-style: none;
+                        padding: 0;
+                        -webkit-transform: translate3d(0,0,0);
+                        -moz-transform: translate3d(0,0,0);
+                        -ms-transform: translate3d(0,0,0);
+                        -o-transform: translate3d(0,0,0);
+                        transform: translate3d(0,0,0);
+                        -webkit-transition: all;
+                        -o-transition: all;
+                        transition: all;
+                        -webkit-transition-duration: 250ms;
+                        transition-duration: 250ms;
+                        a{
+                            padding: 14px 20px 8px 65px;
+                            color:#989898;
+                        }
+                        .active a,a:hover{
+                            color: #262626;   
+                        }
+                    }
                 }
                 &.open{
-                    a{
+                    &>a{
                         &:after{
                             content: "\f273";
                             -webkit-transform: scale(1);
@@ -169,31 +205,14 @@
                         }
                     }
                 }
-                a{
-                    position: relative;
-                    padding: 14px 20px 14px 65px;
-                    display: block;
-                    font-weight: 500;
-                    color: #4C4C4C;
-                    -webkit-transition: color;
-                    -o-transition: color;
-                    transition: color;
-                    -webkit-transition-duration: .3s;
-                    transition-duration: .3s;
-                    span{
-                        position: absolute;
-                        left: 25px;
-                        font-size: 20px;
-                        top: 0;
-                        width: 25px;
-                        text-align: center;
-                        padding: 13px 0;
-                    }
+            }
+            &>li{
+                &.active>a,&>a:hover,{
+                     background-color: #F4F4F4;
                 }
-                &.active a,a:hover{
-                    color: #262626;
-                    background-color: #F4F4F4;
-                }
+            }
+            .active a,a:hover{
+                color: #262626;   
             }
         }
     }
