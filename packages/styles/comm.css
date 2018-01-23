@@ -378,9 +378,6 @@ html {
 	overflow-x:hidden;
 	-ms-overflow-style:none
 }
-html:not(.ie9) body {
-	overflow-y:scroll
-}
 html.ismobile * {
 	cursor:pointer
 }

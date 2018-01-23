@@ -2,10 +2,12 @@ import Style from './styles/index.less'
 
 import Header from './components/header'
 import Sidebar from './components/sidebar'
+import Main from './components/main'
 
 const components = {
     Header,
-    Sidebar
+    Sidebar,
+    Main
 }
 
 //组件注册方法

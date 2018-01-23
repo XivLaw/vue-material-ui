@@ -1,5 +1,5 @@
 <template>
-  <header>
+  <header id="header">
     <div class="mt-burger" :class="{'mt-burger-click':burgerOpen}"  @click="burgerClick">
       <span class="mt-line-top"></span>
       <span class="mt-line-center"></span>
@@ -46,7 +46,7 @@ export default {
 </script>
 
 <style scoped lang="less">
-header {
+#header {
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
   user-select: none;
   position: fixed;
@@ -64,7 +64,7 @@ header {
     position: relative;
     width: 18px;
     height: 12px;
-    margin: 12px 20px;
+    margin: 12px 20px 12px 15px;
     -webkit-transition: all;
     -o-transition: all;
     transition: all;
@@ -126,6 +126,11 @@ header {
 @media (max-width: 1279px) {
   .mt-burger {
     display: block;
+  }
+}
+@media (max-width: 767px) {
+  #header {
+      padding: 17px 8px;
   }
 }
 </style>

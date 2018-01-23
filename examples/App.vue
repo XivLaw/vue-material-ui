@@ -1,7 +1,5 @@
 <template>
   <div id="app">
-    <router-view/>
-    {{$route.state}}
     <mt-header logoStr="Material Admin"></mt-header>
     <mt-sidebar 
       :headImg="this.$store.state.headImg" 
@@ -9,12 +7,13 @@
       :menuData="this.$store.state.menuData" 
       userName="XivLaw"
     ></mt-sidebar>
+    <mt-main title="Home">
+      <div class="col-sm-12"></div>
+    </mt-main>
   </div>
 </template>
 
 <script>
-  
-
   export default {
     name: 'app'
   }

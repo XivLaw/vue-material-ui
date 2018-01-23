@@ -230,7 +230,8 @@ export default {
 }
 @media (max-width: 1279px) {
   #sidebar {
-    left: -268px;
+    left: -288px;
+    box-shadow: 0 0 20px rgba(14,18,21,.38);
   }
 }
 </style>
