@@ -1,18 +1,18 @@
 <template>
   <aside id="sidebar">
-    <div class="profile" :style="{backgroundImage: `url(${headBg})`}">
-      <span class="profile-img">
+    <div class="mt-profile" :style="{backgroundImage: `url(${headBg})`}">
+      <span class="mt-profile-img">
           <img :src="headImg">
       </span>
-      <span class="profile-info">
+      <span class="mt-profile-info">
           {{userName}}
       </span>
     </div>
-    <ul class="sidebar-menu">
+    <ul class="mt-sidebar-menu">
       <li 
         v-for="(val, key) in menu" 
         :class="{
-          'sub-menu': val.haveChild, 
+          'mt-sub-menu': val.haveChild, 
           'open': val.open, 
           'active': path == val.src
         }" 
@@ -97,7 +97,7 @@ export default {
   &.sidebar-show {
     left: 0px;
   }
-  .profile {
+  .mt-profile {
     height: 129px;
     margin-bottom: 5px;
     width: 100%;
@@ -105,7 +105,7 @@ export default {
     background-position: center center;
     span {
       display: block;
-      &.profile-img {
+      &.mt-profile-img {
         padding: 12px;
         img {
           width: 47px;
@@ -115,7 +115,7 @@ export default {
           box-sizing: content-box;
         }
       }
-      &.profile-info {
+      &.mt-profile-info {
         position: relative;
         padding: 7px 14px;
         margin-top: 20px;
@@ -124,7 +124,7 @@ export default {
       }
     }
   }
-  .sidebar-menu {
+  .mt-sidebar-menu {
     list-style: none;
     padding-left: 0;
     margin: 20px 0 0;
@@ -151,7 +151,7 @@ export default {
           padding: 13px 0;
         }
       }
-      &.sub-menu {
+      &.mt-sub-menu {
         & > a {
           &::after,
           &::before {

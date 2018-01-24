@@ -1,12 +1,12 @@
 <template>
   <div class="mt-card">
-    <div class="mt-card-header" v-if="title">
+    <div class="mt-card-header" v-if="title" :class="`bgm-${cardBg}`">
       <h2>
         {{title}}
         <small v-if="minTitle">{{minTitle}}</small>
       </h2>
     </div>
-    <div class="mt-card-body">
+    <div class="mt-card-body" :class="{'mt-card-padding': !title || cardBg, [`bgm-${cardBg}`]: !title && cardBg}">
       <slot></slot>
     </div>
   </div>
@@ -17,7 +17,8 @@
       name: 'MtCard',
       props: {
         title: String,
-        minTitle: String
+        minTitle: String,
+        cardBg: String
       }
   }
 </script>
@@ -45,6 +46,16 @@
   }
   .mt-card .mt-card-body{
     padding-top: 0;
+  }
+  .mt-card .mt-card-padding{
+    padding-top: 18px;
+  }
+  .mt-card-body:after,.mt-card-body:before {
+    content: " ";
+    display: table;
+  }
+  .mt-card-body:after {
+    clear: both;
   }
   @media screen and (min-width:768px) {
     .mt-card-header,.mt-card-body {

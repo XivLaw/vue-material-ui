@@ -12,7 +12,7 @@ const store = new Vuex.Store({
         headBg,
         menuData: {
             0: {
-                name: 'Home',
+                name: 'Home 首页',
                 src: '/',
                 icon: 'home',
                 open: false,
@@ -20,9 +20,9 @@ const store = new Vuex.Store({
                 haveChild: false
             },
             1: {
-                name: 'Card',
-                src: '/card',
-                icon: 'widgets',
+                name: 'Typography 文字排版',
+                src: '/typography',
+                icon: 'format-underlined',
                 open: false,
                 childs: {},
                 haveChild: false
@@ -30,7 +30,7 @@ const store = new Vuex.Store({
             2: {
                 name: 'Templates',
                 src: '/templates',
-                icon: 'format-underlined',
+                icon: 'widgets',
                 open: false,
                 haveChild: false
             },

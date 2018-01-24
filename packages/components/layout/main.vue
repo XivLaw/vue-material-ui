@@ -1,7 +1,7 @@
 <template>
   <section id="main">
-    <div class="container">
-      <div class="block-header">
+    <div class="mt-container">
+      <div class="mt-block-header">
         <h2>{{title}}</h2>
       </div>
       <slot></slot>
@@ -26,25 +26,25 @@
     padding-top: 100px;
     padding-right: 15px;
   }
-  .container {
+  .mt-container {
     padding-left: 15px;
     padding-right: 15px;
     margin-right: auto;
     margin-left: auto;
   }
-  .container:after,.container:before {
+  .mt-container:after,.mt-container:before {
     content: " ";
     display: table;
   }
-  .container:after {
+  .mt-container:after {
     clear: both;
   }
-  .block-header {
+  .mt-block-header {
     margin-bottom: 25px;
     position: relative;
   }
 
-  .block-header>h2 {
+  .mt-block-header>h2 {
     font-size: 15px;
     color: #777;
     margin: 0;
@@ -58,7 +58,7 @@
   }
 
   @media (min-width:1200px) {
-    .container {
+    .mt-container {
       width: 100%;
     }
   }
@@ -68,13 +68,13 @@
     }
   }
   @media screen and (max-width:991px) {
-    .block-header {
+    .mt-block-header {
       padding: 0 18px;
     }
   }
 
   @media screen and (min-width:768px) {
-    .block-header {
+    .mt-block-header {
       padding: 0 22px;
     }
   }
