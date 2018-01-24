@@ -192,6 +192,12 @@ hr {
 [role=button] {
 	cursor:pointer
 }
+h1,h2,h3,h4,h5,h6 {
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.1;
+  color: #000
+}
 h1 {
 	font-size:33px
 }
@@ -398,4 +404,15 @@ label {
 }
 input:active,input:focus {
 	outline:0
+}
+.lead {
+  margin-bottom: 18px;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.4
+}
+@media (min-width:768px) {
+  .lead {
+    font-size: 19.5px
+  }
 }
