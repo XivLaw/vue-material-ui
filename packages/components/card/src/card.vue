@@ -1,6 +1,6 @@
 <template>
   <div class="mt-card">
-    <div class="mt-card-header" v-if="title" :class="`bgm-${cardBg}`">
+    <div class="mt-card-header" v-if="title" :class="{[`bgm-${cardBg}`]: cardBg}">
       <h2>
         {{title}}
         <small v-if="minTitle">{{minTitle}}</small>

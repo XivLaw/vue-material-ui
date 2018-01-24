@@ -2,32 +2,32 @@
   <div>
 
     <mt-card title="广告文本">
-      <p class="lead">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.</p>
-      <p>Pellentesque lacinia sagittis libero et feugiat. Etiam volutpat adipiscing tortor non luctus. Vivamus venenatis vitae metus et aliquet. Praesent vitae justo purus. In hendrerit lorem nisl, ac lacinia urna aliquet non. Quisque nisi tellus, rhoncus quis est sit amet, lacinia euismod nunc. Aenean nec nibh velit. Fusce quis ante in nisl molestie fringilla. Nunc vitae ante id magna feugiat condimentum. Maecenas sit amet urna massa.</p>
-      <p>Integer eu lectus sollicitudin, hendrerit est ac, sollicitudin nisl. Quisque viverra sodales lectus nec ultrices. Fusce elit dolor, dignissim a nunc id, varius suscipit turpis. Cras porttitor turpis vitae leo accumsan molestie. Morbi vitae luctus leo. Sed nec scelerisque magna, et adipiscing est. Proin lobortis lectus eu sem ullamcorper, commodo malesuada quam fringilla. Curabitur ac nunc dui. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce sagittis enim eu est lacinia, ut egestas ligula imperdiet.</p>
+      <p class="lead">上士闻道，仅能行之；中士闻道，若存若亡；下士闻道，大笑之。不笑不足以为道。</p>
+      <p>深知什么是雄强，却安守雌柔的地位，甘愿做天下的溪涧。甘愿作天下的溪涧，永恒的德性就不会离失，回复到婴儿般单纯的状态。深知什么是明亮，却安于暗昧的地位，甘愿做天下的模式。甘愿做天下的模式，永恒的德行不相差失，恢复到不可穷极的真理。深知什么是荣耀，却安守卑辱的地位，甘愿做天下的川谷。甘愿做天下的川谷，永恒的德性才得以充足，回复到自然本初的素朴纯真状态。朴素本初的东西经制作而成器物，有道的人沿用真朴，则为百官之长，所以完善的政治是不可分割的。</p>
+      <p>治理百姓和养护身心，没有比爱惜精神更为重要的了。爱惜精神，得以能够做到早作准备；早作准备，就是不断地积“德”；不断地积“德”，就没有什么不能攻克的；没有什么不能攻克，那就无法估量他的力量；具备了这种无法估量的力量，就可以担负治理国家的重任。有了治理国家的原则和道理，国家就可以长久维持。国运长久，就叫做根深祗固，符合长久维持之道。</p>
     </mt-card>
 
     <mt-card title="标题">
       <h1>标题 1</h1>
-      <p>Suspendisse vel quam malesuada, aliquet sem sit amet, fringilla elit. Morbi tempor tincidunt tempor. Etiam id turpis viverra, vulputate sapien nec, varius sem. Curabitur ullamcorper fringilla eleifend. In ut eros hendrerit est consequat posuere et at velit.</p>
+      <p>第一次，他与朋友何塞· 德尔·卡门·巴斯塔门特从洪都拉斯出发。他们记得，一共走了31天，行程约1000英里，穿越危地马拉，深入墨西哥中部的维拉克鲁斯州。在那里，migra从货车顶上抓住了他们。坐着被移民们称为“泪水巴士”的车辆，俩人被送回危地马拉。这些巴士每天往返8次之多，每年将超过10万名不幸的乘客驱逐出境。</p>
       <div class="clearfix"></div>
       <h2>标题 2</h2>
-      <p>In nec rhoncus eros. Vestibulum eu mattis nisl. Quisque viverra viverra magna nec pulvinar. Maecenas pellentesque porta augue, consectetur facilisis diam porttitor sed. Suspendisse tempor est sodales augue rutrum tincidunt. Quisque a malesuada purus.</p>
+      <p>第二次：恩利克独自出行。在走了5天、深入墨西哥150英里的时候，他犯了个错误，在货车顶上昏昏沉沉地睡着了，连鞋子掉到了地上。警察在托那拉镇附近拦停货车盘查移民，恩利克只得跳下车厢，落荒而逃。光着脚，他跑不了多远，只好在某个草丛里躲了一夜。随即，恩利克被抓住，上了返回危地马拉的巴士。</p>
       <div class="clearfix"></div>
       <h3>标题 3</h3>
-      <p>Vestibulum auctor tincidunt semper. Phasellus ut vulputate lacus. Suspendisse ultricies mi eros, sit amet tempor nulla varius sed. Proin nisl nisi, feugiat quis bibendum vitae, dapibus in tellus.</p>
+      <p>第三次：两天后，在墨西哥境内190英里的查辉特斯附近的一个空房子里，警察将恩利克从梦中惊醒。恩利克说，警察洗劫了他，然后把他转交给migra。他再次登上巴士，回到危地马拉。</p>
       <div class="clearfix"></div>
       <h4>标题 4</h4>
-      <p>Nulla et mattis nunc. Curabitur scelerisque commodo condimentum. Mauris blandit, velit a consectetur egestas, diam arcu fermentum justo, eget ultrices arcu eros vel erat.</p>
+      <p>第四次：一天后，12英里之外，在墨西哥塔帕楚拉货场附近的一片坟地里，在一个摩索拉斯式陵墓顶上，警察抓住了熟睡中的恩利克。这个货场以女移民频遭强奸而臭名昭著。就在两年前，一个女移民遭强奸后被石头砸死。migra把恩利克送回危地马拉。</p>
       <div class="clearfix"></div>
       <h5>标题 5</h5>
-      <p>Quisque nec turpis at urna dictum luctus. Suspendisse convallis dignissim eros at volutpat. In egestas mattis dui. Aliquam mattis dictum aliquet. Nulla sapien mauris, eleifend et sem ac, commodo dapibus odio. Vivamus pretium nec odio cursus elementum. Suspendisse molestie ullamcorper ornare.</p>
+      <p>第五次：在墨西哥城北部的魁勒塔洛，migra抓获了正在铁轨上行走的恩利克。这次，恩利克已深入墨西哥达838英里，旅程已近一周。一群马蜂蜇了他的脸。移民执法官第五次把恩利克运回危地马拉。</p>
       <div class="clearfix"></div>
       <h6>标题 6</h6>
-      <p>Donec ultricies, lacus id tempor condimentum, orci leo faucibus sem, a molestie libero lectus ac justo. ultricies mi eros, sit amet tempor nulla varius sed. Proin nisl nisi, feugiat quis bibendum vitae, dapibus in tellus.</p>
+      <p>第六次：他功败垂成。用了5天多时间，行程1564英里，恩利克抵达格兰德河，对岸的美国已触手可及。在一堆铁轨附近独自吃东西时，migra的执法官逮住了他。执法官把他送往墨西哥城一个外号叫“人肉庄”的拘留中心。第二天，坐了14小时大巴，他又回到了危地马拉。</p>
     </mt-card>
 
-    <mt-card title="内联文本样式" cardBg="lightgreen">
+    <mt-card title="内联文本样式">
       <div class="row">
         <div class="col-sm-4 m-b-25">
             <p class="c-black">标记文字</p>
