@@ -18,7 +18,13 @@
       props: {
         title: String,
         minTitle: String,
-        cardBg: String
+        cardBg: {
+          type: String,
+          validator (val) {
+            var colorStr = 'black,brown,pink,red,blue,purple,deeppurple,lightblue,cyan,teal,green,lightgreen,lime,yellow,amber,orange,deeporange,gray,bluegray,indigo'
+            return colorStr.indexOf(val) >= 0 
+          }
+        }
       }
   }
 </script>

@@ -61,7 +61,7 @@
         </div>
         <div class="col-sm-4">
             <p class="c-black">加粗文字</p>
-            <p>用于强调的文本，可使用strong标签</p>
+            <p>用于强调的文本，可使用strong标签。</p>
             <strong>这是一个strong标签</strong>
         </div>
         <div class="col-sm-4">
@@ -74,51 +74,48 @@
 
     <div class="row">
       <div class="col-sm-6">  
-        <mt-card title="Helper Classes">
-          <p class="c-black">Alignment Classes</p>
-          <p>Easily realign text to components with text alignment classes.</p>
-          <p class="text-left">Left aligned text.</p>
-          <p class="text-center">Center aligned text.</p>
-          <p class="text-right">Right aligned text.</p>
-          <p class="text-justify">Justified text.</p>
-          <p class="text-nowrap">No wrap text.</p>
-          <p class="c-black m-t-25">Transformation classes</p>
-          <p>Transform text in components with text capitalization classes.</p>
-          <p class="text-lowercase">Lowercased text.</p>
-          <p class="text-uppercase">Uppercased text.</p>
-          <p class="text-capitalize">Capitalized text.</p>
+        <mt-card title="辅助类布局">
+          <p class="c-black">排列</p>
+          <p>用来排列文本的左中右对齐。</p>
+          <p class="text-left">向左对齐</p>
+          <p class="text-center">居中对齐</p>
+          <p class="text-right">向右对齐</p>
+          <p class="text-justify">水平对齐</p>
+          <p class="text-nowrap">不换行</p>
+          <p class="c-black m-t-25">大小写转换</p>
+          <p>英文的大小写转换。</p>
+          <p class="text-lowercase">Go Get Got</p>
+          <p class="text-uppercase">Do Did Done</p>
+          <p class="text-capitalize">Can Could Would</p>
         </mt-card>
       </div>
       <div class="col-sm-6">  
-        <mt-card title="You can put anything here">
-          <p>Stylized implementation of HTML's 'abbr' element for abbreviations and acronyms to show the expanded version on hover. Abbreviations with a 'title' attribute have a light dotted bottom border and a help cursor on hover, providing additional context on hover and to users of assistive technologies.</p>
-          <p class="c-black m-t-20">Basic abbreviation</p>
-          <p>An abbreviation of the word attribute is <abbr title="attribute">attr</abbr>.</p>
-          <p class="c-black m-t-20">Initialism</p>
-          <p>Add <abbr title="Initialism" class="initialism">Initialism</abbr> to an abbreviation for a slightly smaller font-size.</p>
+        <mt-card title="Blahblahblahblahblah.">
+          <p>当你需要使用文字缩写的时候，可以使用abbr标签，只需要将鼠标移到abbr的标签文字上，你便可以看到所写的文字啦~</p>
+          <p>猜猜看我是啥？ <abbr title="皮卡丘~">(`・ω・´) </abbr>.</p>
         </mt-card>
       </div>
     </div>
 
-    <mt-card title="Blockquotes">
-      <p class="m-b-25">For quoting blocks of content from another source within yourdocument.</p>
+    <mt-card title="文本引用块">
+      <p class="m-b-25">你可以将一些引用的名言或者其他的文字放在blockquote标签中。</p>
       <blockquote class="m-b-25">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+          <p>死宅真恶心！</p>
       </blockquote>
       <blockquote class="m-b-25">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-          <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+          <p>“谁说的？我没说！别瞎说啊？！”</p>
+          <footer>鲁迅 <cite title="Source Title">《鲁迅三连》</cite></footer>
       </blockquote>
       <blockquote class="blockquote-reverse m-b-25">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-          <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+          <p>我从未见过有如此厚颜无耻之人！</p>
+          <footer>诸葛亮 <cite title="Source Title">《三国演义》</cite></footer>
       </blockquote>
     </mt-card>
 
-    <mt-card title="List">
+    <mt-card title="列表">
       <div class="row">
         <div class="col-sm-4 m-b-25">
-          <p class="c-black">Unordered</p>
+          <p class="c-black">无序列表</p>
           <ul>
             <li>Lorem ipsum dolor sit amet</li>
             <li>Consectetur adipiscing elit</li>
@@ -138,7 +135,7 @@
           </ul>
         </div>
         <div class="col-sm-4 m-b-25">
-            <p class="c-black">Ordered</p>
+            <p class="c-black">有序列表</p>
             <ol>
               <li>Lorem ipsum dolor sit amet</li>
               <li>Consectetur adipiscing elit</li>
@@ -155,7 +152,7 @@
             </ol>
         </div>
         <div class="col-sm-4 m-b-25">
-            <p class="c-black">Ordered - Roman</p>
+            <p class="c-black">有序列表（罗马字母）</p>
             <ol type="i">
               <li>Lorem ipsum dolor sit amet</li>
               <li>Consectetur adipiscing elit</li>
@@ -174,7 +171,7 @@
       </div>
       <div class="row">
         <div class="col-sm-4 m-b-25">
-          <p class="c-black">Custom - 1</p>
+          <p class="c-black">自定义图标 1</p>
           <ul class="clist clist-angle">
             <li>Lorem ipsum dolor sit amet</li>
             <li>Consectetur adipiscing elit</li>
@@ -191,7 +188,7 @@
           </ul>
         </div>
         <div class="col-sm-4 m-b-25">
-          <p class="c-black">Custom - 2</p>
+          <p class="c-black">自定义图标 2</p>
           <ul class="clist clist-check">
             <li>Lorem ipsum dolor sit amet</li>
             <li>Consectetur adipiscing elit</li>
@@ -208,7 +205,7 @@
           </ul>
         </div>
         <div class="col-sm-4 m-b-25">
-          <p class="c-black">Custom - 3</p>
+          <p class="c-black">自定义图标 3</p>
           <ul class="clist clist-star">
             <li>Lorem ipsum dolor sit amet</li>
             <li>Consectetur adipiscing elit</li>
