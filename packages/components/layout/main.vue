@@ -24,7 +24,7 @@
 <style scoped>
   #main {
     padding-top: 100px;
-    padding-right: 15px
+    padding-right: 15px;
   }
   .container {
     padding-left: 15px;
@@ -41,7 +41,7 @@
   }
   .block-header {
     margin-bottom: 25px;
-    position: relative
+    position: relative;
   }
 
   .block-header>h2 {
@@ -49,7 +49,7 @@
     color: #777;
     margin: 0;
     font-weight: 400;
-    text-transform: uppercase
+    text-transform: uppercase;
   }
   @media (min-width:1280px) {
     #main {
@@ -59,25 +59,29 @@
 
   @media (min-width:1200px) {
     .container {
-      width: 100%
+      width: 100%;
     }
   }
-
+  @media (min-width:768px) and (max-width:1279px) {
+    #main {
+      padding-left: 15px;
+    }
+  }
   @media screen and (max-width:991px) {
     .block-header {
-      padding: 0 18px
+      padding: 0 18px;
     }
   }
 
   @media screen and (min-width:768px) {
     .block-header {
-      padding: 0 22px
+      padding: 0 22px;
     }
   }
 
-  @media (min-width:768px) and (max-width:1279px) {
+  @media screen and (max-width:425px) {
     #main {
-      padding-left: 15px;
+      padding-right: 0;
     }
   }
 </style>
