@@ -17,18 +17,22 @@
           'active': path == val.src
         }" 
       >
-        <a :href="val.src" @click="val.haveChild && menuOpne(key)">
+        <a @click="menuOpne(key)" v-if="val.haveChild">
           <span :class="['zmdi', `zmdi-${val.icon}`]"></span>
           {{val.name}}
         </a>
+        <router-link v-else :to="val.src">
+          <span :class="['zmdi', `zmdi-${val.icon}`]"></span>
+          {{val.name}}
+        </router-link>
         <ul 
           v-if="val.haveChild" 
           :style="{
             height: val.open ? `${Object.keys(val.childs).length * 40}px` : `0px`
           }"
         >
-          <li v-for="(v, k) in val.childs" :class="{'active': path == v}">
-              <a href="#">{{v.name}}</a>
+          <li v-for="(v, k) in val.childs" :class="{'active': path == v.src}">
+              <router-link :to="v.src">{{v.name}}</router-link>
           </li>
         </ul>
       </li>
@@ -66,6 +70,11 @@ export default {
   methods: {
     menuOpne(key) {
       this.menu[key].open = !this.menu[key].open;
+    }
+  },
+  watch: {
+    '$route' (to, from) {
+      this.path = to.path
     }
   }
 };

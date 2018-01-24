@@ -20,46 +20,21 @@ const store = new Vuex.Store({
                 haveChild: false
             },
             1: {
-                name: 'Headers',
-                icon: 'view-compact',
-                open: false,
-                childs: {
-                    0: {
-                        name: 'Textual menu',
-                        src: '/textual-menu'
-                    },
-                    1: {
-                        name: 'Image logo',
-                        src: '/image-logo'
-                    }
-                },
-                haveChild: true
-            },
-            2: {
-                name: 'Typography',
-                src: '/typography',
-                icon: 'format-underlined',
+                name: 'Card',
+                src: '/card',
+                icon: 'widgets',
                 open: false,
                 childs: {},
                 haveChild: false
             },
-            3: {
-                name: 'Widgets',
-                icon: 'widgets',
+            2: {
+                name: 'Templates',
+                src: '/templates',
+                icon: 'format-underlined',
                 open: false,
-                childs: {
-                    0: {
-                        name: 'Templates',
-                        src: '/templates'
-                    },
-                    1: {
-                        name: 'Widgets',
-                        src: '/image-logo'
-                    }
-                },
-                haveChild: true
+                haveChild: false
             },
-            4: {
+            3: {
                 name: 'Table',
                 icon: 'view-list',
                 open: false,
@@ -75,7 +50,7 @@ const store = new Vuex.Store({
                 },
                 haveChild: true
             },
-            5: {
+            4: {
                 name: 'Forms',
                 icon: 'collection-text',
                 open: false,
@@ -99,7 +74,7 @@ const store = new Vuex.Store({
                 },
                 haveChild: true
             },
-            6: {
+            5: {
                 name: 'Buttons',
                 src: '/buttons',
                 icon: 'crop-16-9',
@@ -107,7 +82,7 @@ const store = new Vuex.Store({
                 childs: {},
                 haveChild: false
             },
-            7: {
+            6: {
                 name: 'Alerts',
                 src: '/alerts',
                 icon: 'comment-more',
@@ -115,7 +90,7 @@ const store = new Vuex.Store({
                 childs: {},
                 haveChild: false
             },
-            8: {
+            7: {
                 name: 'Dialogs',
                 src: '/dialogs',
                 icon: 'comment-text-alt',
@@ -123,7 +98,7 @@ const store = new Vuex.Store({
                 childs: {},
                 haveChild: false
             },
-            9: {
+            8: {
                 name: 'User Interface',
                 icon: 'swap-alt',
                 open: true,

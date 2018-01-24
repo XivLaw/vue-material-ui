@@ -3,11 +3,13 @@ import Style from './styles/index.less'
 import Header from './components/header'
 import Sidebar from './components/sidebar'
 import Main from './components/main'
+import Card from './components/card'
 
 const components = {
     Header,
     Sidebar,
-    Main
+    Main,
+    Card
 }
 
 //组件注册方法
