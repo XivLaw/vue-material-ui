@@ -14,7 +14,7 @@
         :class="{
           'mt-sub-menu': val.haveChild, 
           'open': val.open, 
-          'active': path == val.src
+          'active': src == val.src
         }" 
       >
         <a @click="menuOpne(key)" v-if="val.haveChild">
@@ -31,7 +31,7 @@
             height: val.open ? `${Object.keys(val.childs).length * 40}px` : `0px`
           }"
         >
-          <li v-for="(v, k) in val.childs" :class="{'active': path == v.src}">
+          <li v-for="(v, k) in val.childs" :class="{'active': src == v.src}">
               <router-link :to="v.src">{{v.name}}</router-link>
           </li>
         </ul>
@@ -46,7 +46,7 @@ export default {
   data() {
     return {
       menu: this.menuData,
-      path: location.pathname
+      src: location.pathname
     };
   },
   props: {
@@ -67,14 +67,25 @@ export default {
       type: Object
     }
   },
+  created() {
+    for(let index in this.menu) {
+      if(this.menu[index].haveChild) {
+        for(let i in this.menu[index].childs) {
+          if(this.src == this.menu[index].childs[i].src) {
+            this.menu[index].open = true
+          }
+        }
+      }
+    }
+  },
   methods: {
     menuOpne(key) {
-      this.menu[key].open = !this.menu[key].open;
+      this.menu[key].open = ! this.menu[key].open;
     }
   },
   watch: {
     '$route' (to, from) {
-      this.path = to.path
+      this.src = to.path
     }
   }
 };

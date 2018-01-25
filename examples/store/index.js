@@ -16,7 +16,6 @@ const store = new Vuex.Store({
                 src: '/',
                 icon: 'home',
                 open: false,
-                childs: {},
                 haveChild: false
             },
             1: {
@@ -24,12 +23,11 @@ const store = new Vuex.Store({
                 src: '/typography',
                 icon: 'format-underlined',
                 open: false,
-                childs: {},
                 haveChild: false
             },
             2: {
-                name: 'Templates',
-                src: '/templates',
+                name: 'Cards 卡片',
+                src: '/cards',
                 icon: 'widgets',
                 open: false,
                 haveChild: false
@@ -79,7 +77,6 @@ const store = new Vuex.Store({
                 src: '/buttons',
                 icon: 'crop-16-9',
                 open: false,
-                childs: {},
                 haveChild: false
             },
             6: {
@@ -87,7 +84,6 @@ const store = new Vuex.Store({
                 src: '/alerts',
                 icon: 'comment-more',
                 open: false,
-                childs: {},
                 haveChild: false
             },
             7: {
@@ -95,7 +91,6 @@ const store = new Vuex.Store({
                 src: '/dialogs',
                 icon: 'comment-text-alt',
                 open: false,
-                childs: {},
                 haveChild: false
             },
             8: {
