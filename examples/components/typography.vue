@@ -104,11 +104,11 @@
       </blockquote>
       <blockquote class="m-b-25">
           <p>“谁说的？我没说！别瞎说啊？！”</p>
-          <footer>鲁迅 <cite title="Source Title">《鲁迅三连》</cite></footer>
+          <footer>鲁迅 <cite title="《鲁迅三连》">《鲁迅三连》</cite></footer>
       </blockquote>
       <blockquote class="blockquote-reverse m-b-25">
           <p>我从未见过有如此厚颜无耻之人！</p>
-          <footer>诸葛亮 <cite title="Source Title">《三国演义》</cite></footer>
+          <footer>诸葛亮 <cite title="《三国演义》">《三国演义》</cite></footer>
       </blockquote>
     </mt-card>
 

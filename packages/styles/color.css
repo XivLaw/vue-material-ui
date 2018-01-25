@@ -1,0 +1,64 @@
+/* 背景颜色&文字颜色 */
+[class*=bgm-],[class*=bgm-] h2,[class*=bgm-] h2 small,[class*=bgm-] p {
+	color: #FFFFFF!important;;
+}
+.bgm-black {
+  background-color: #000!important;
+}
+.bgm-brown {
+  background-color: #795548!important;
+}
+.bgm-pink {
+  background-color: #E91E63!important;
+}
+.bgm-red {
+  background-color: #F44336!important;
+}
+.bgm-blue {
+  background-color: #2196F3!important;
+}
+.bgm-purple {
+  background-color: #BA68C8!important;
+}
+.bgm-deeppurple {
+  background-color: #673AB7!important;
+}
+.bgm-lightblue {
+  background-color: #03A9F4!important;
+}
+.bgm-cyan {
+  background-color: #00BCD4!important;
+}
+.bgm-teal {
+  background-color: #009688!important;
+}
+.bgm-green {
+  background-color: #4CAF50!important;
+}
+.bgm-lightgreen {
+  background-color: #8BC34A!important;
+}
+.bgm-lime {
+  background-color: #CDDC39!important;
+}
+.bgm-yellow {
+  background-color: #FFEB3B!important;
+}
+.bgm-amber {
+  background-color: #FFC107!important;
+}
+.bgm-orange {
+  background-color: #FF9800!important;
+}
+.bgm-deeporange {
+  background-color: #FF5722!important;
+}
+.bgm-gray {
+  background-color: #9E9E9E!important;
+}
+.bgm-bluegray {
+  background-color: #607D8B!important;
+}
+.bgm-indigo {
+  background-color: #3F51B5!important;
+}

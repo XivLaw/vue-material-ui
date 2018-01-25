@@ -1,6 +1,6 @@
 <template>
   <section id="main">
-    <div class="mt-container">
+    <div class="mt-container clearfix">
       <div class="mt-block-header">
         <h2>{{title}}</h2>
       </div>
@@ -31,13 +31,6 @@
     padding-right: 15px;
     margin-right: auto;
     margin-left: auto;
-  }
-  .mt-container:after,.mt-container:before {
-    content: " ";
-    display: table;
-  }
-  .mt-container:after {
-    clear: both;
   }
   .mt-block-header {
     margin-bottom: 25px;

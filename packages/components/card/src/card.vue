@@ -1,12 +1,18 @@
 <template>
   <div class="mt-card">
-    <div class="mt-card-header" v-if="title" :class="{[`bgm-${cardBg}`]: cardBg}">
+    <div class="mt-card-header" v-if="title" :class="{[`bgm-${bg}`]: bg}">
       <h2>
         {{title}}
         <small v-if="minTitle">{{minTitle}}</small>
       </h2>
     </div>
-    <div class="mt-card-body" :class="{'mt-card-padding': !title || cardBg, [`bgm-${cardBg}`]: !title && cardBg}">
+    <div 
+      class="mt-card-body clearfix" 
+      :class="{
+        'mt-card-padding': !title || bg, 
+        [`bgm-${bg}`]: !title && bg
+      }"
+    >
       <slot></slot>
     </div>
   </div>
@@ -18,7 +24,7 @@
       props: {
         title: String,
         minTitle: String,
-        cardBg: {
+        bg: {
           type: String,
           validator (val) {
             var colorStr = 'black,brown,pink,red,blue,purple,deeppurple,lightblue,cyan,teal,green,lightgreen,lime,yellow,amber,orange,deeporange,gray,bluegray,indigo'
@@ -55,13 +61,6 @@
   }
   .mt-card .mt-card-padding{
     padding-top: 18px;
-  }
-  .mt-card-body:after,.mt-card-body:before {
-    content: " ";
-    display: table;
-  }
-  .mt-card-body:after {
-    clear: both;
   }
   @media screen and (min-width:768px) {
     .mt-card-header,.mt-card-body {

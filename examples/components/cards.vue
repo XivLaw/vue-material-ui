@@ -20,35 +20,17 @@
 
     <div class="row">
       <div class="col-sm-4">
-        <mt-card title="Cyan" minTitle="青色" cardBg="cyan">
+        <mt-card title="Cyan" minTitle="青色" bg="cyan">
           Cras leo sem, egestas a accumsan eget, euismod at nunc. Praesent vel mi blandit, tempus ex gravida, accumsan dui. Sed sed aliquam augue. Nullam vel suscipit purus, eu facilisis ante. Mauris nec commodo felis.
         </mt-card>
       </div>
       <div class="col-sm-4">
-        <mt-card title="Red" minTitle="红色" cardBg="red">
+        <mt-card title="Red" minTitle="红色" bg="red">
           Cras leo sem, egestas a accumsan eget, euismod at nunc. Praesent vel mi blandit, tempus ex gravida, accumsan dui. Sed sed aliquam augue. Nullam vel suscipit purus, eu facilisis ante. Mauris nec commodo felis.
         </mt-card>
       </div>
       <div class="col-sm-4">
-        <mt-card title="Orange" minTitle="橙色" cardBg="orange">
-          Cras leo sem, egestas a accumsan eget, euismod at nunc. Praesent vel mi blandit, tempus ex gravida, accumsan dui. Sed sed aliquam augue. Nullam vel suscipit purus, eu facilisis ante. Mauris nec commodo felis.
-        </mt-card>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-sm-4">
-        <mt-card title="Green" minTitle="绿色" cardBg="green">
-          Cras leo sem, egestas a accumsan eget, euismod at nunc. Praesent vel mi blandit, tempus ex gravida, accumsan dui. Sed sed aliquam augue. Nullam vel suscipit purus, eu facilisis ante. Mauris nec commodo felis.
-        </mt-card>
-      </div>
-      <div class="col-sm-4">
-        <mt-card title="Purple" minTitle="紫色" cardBg="purple">
-          Cras leo sem, egestas a accumsan eget, euismod at nunc. Praesent vel mi blandit, tempus ex gravida, accumsan dui. Sed sed aliquam augue. Nullam vel suscipit purus, eu facilisis ante. Mauris nec commodo felis.
-        </mt-card>
-      </div>
-      <div class="col-sm-4">
-        <mt-card title="Blue Gray" minTitle="蓝灰色" cardBg="bluegray">
+        <mt-card title="Orange" minTitle="橙色" bg="orange">
           Cras leo sem, egestas a accumsan eget, euismod at nunc. Praesent vel mi blandit, tempus ex gravida, accumsan dui. Sed sed aliquam augue. Nullam vel suscipit purus, eu facilisis ante. Mauris nec commodo felis.
         </mt-card>
       </div>
@@ -56,17 +38,17 @@
 
     <div class="row">
       <div class="col-sm-4">
-        <mt-card cardBg="cyan">
+        <mt-card title="Green" minTitle="绿色" bg="green">
           Cras leo sem, egestas a accumsan eget, euismod at nunc. Praesent vel mi blandit, tempus ex gravida, accumsan dui. Sed sed aliquam augue. Nullam vel suscipit purus, eu facilisis ante. Mauris nec commodo felis.
         </mt-card>
       </div>
       <div class="col-sm-4">
-        <mt-card cardBg="red">
+        <mt-card title="Purple" minTitle="紫色" bg="purple">
           Cras leo sem, egestas a accumsan eget, euismod at nunc. Praesent vel mi blandit, tempus ex gravida, accumsan dui. Sed sed aliquam augue. Nullam vel suscipit purus, eu facilisis ante. Mauris nec commodo felis.
         </mt-card>
       </div>
       <div class="col-sm-4">
-        <mt-card cardBg="orange">
+        <mt-card title="Blue Gray" minTitle="蓝灰色" bg="bluegray">
           Cras leo sem, egestas a accumsan eget, euismod at nunc. Praesent vel mi blandit, tempus ex gravida, accumsan dui. Sed sed aliquam augue. Nullam vel suscipit purus, eu facilisis ante. Mauris nec commodo felis.
         </mt-card>
       </div>
@@ -74,17 +56,35 @@
 
     <div class="row">
       <div class="col-sm-4">
-        <mt-card cardBg="green">
+        <mt-card bg="cyan">
           Cras leo sem, egestas a accumsan eget, euismod at nunc. Praesent vel mi blandit, tempus ex gravida, accumsan dui. Sed sed aliquam augue. Nullam vel suscipit purus, eu facilisis ante. Mauris nec commodo felis.
         </mt-card>
       </div>
       <div class="col-sm-4">
-        <mt-card cardBg="purple">
+        <mt-card bg="red">
           Cras leo sem, egestas a accumsan eget, euismod at nunc. Praesent vel mi blandit, tempus ex gravida, accumsan dui. Sed sed aliquam augue. Nullam vel suscipit purus, eu facilisis ante. Mauris nec commodo felis.
         </mt-card>
       </div>
       <div class="col-sm-4">
-        <mt-card cardBg="bluegray">
+        <mt-card bg="orange">
+          Cras leo sem, egestas a accumsan eget, euismod at nunc. Praesent vel mi blandit, tempus ex gravida, accumsan dui. Sed sed aliquam augue. Nullam vel suscipit purus, eu facilisis ante. Mauris nec commodo felis.
+        </mt-card>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-4">
+        <mt-card bg="green">
+          Cras leo sem, egestas a accumsan eget, euismod at nunc. Praesent vel mi blandit, tempus ex gravida, accumsan dui. Sed sed aliquam augue. Nullam vel suscipit purus, eu facilisis ante. Mauris nec commodo felis.
+        </mt-card>
+      </div>
+      <div class="col-sm-4">
+        <mt-card bg="purple">
+          Cras leo sem, egestas a accumsan eget, euismod at nunc. Praesent vel mi blandit, tempus ex gravida, accumsan dui. Sed sed aliquam augue. Nullam vel suscipit purus, eu facilisis ante. Mauris nec commodo felis.
+        </mt-card>
+      </div>
+      <div class="col-sm-4">
+        <mt-card bg="bluegray">
           Cras leo sem, egestas a accumsan eget, euismod at nunc. Praesent vel mi blandit, tempus ex gravida, accumsan dui. Sed sed aliquam augue. Nullam vel suscipit purus, eu facilisis ante. Mauris nec commodo felis.
         </mt-card>
       </div>

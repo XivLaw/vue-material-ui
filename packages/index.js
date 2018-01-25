@@ -1,4 +1,4 @@
-import Style from './styles/index.less'
+import Style from './styles/index.css'
 
 import Header from './components/header'
 import Sidebar from './components/sidebar'
