@@ -108,7 +108,7 @@
       </blockquote>
       <blockquote class="blockquote-reverse m-b-25">
           <p>我从未见过有如此厚颜无耻之人！</p>
-          <footer>诸葛亮 <cite title="《三国演义》">《三国演义》</cite></footer>
+          <footer><cite title="《三国演义》">《三国演义》</cite> 诸葛亮</footer>
       </blockquote>
     </mt-card>
 
