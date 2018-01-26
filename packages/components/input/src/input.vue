@@ -1,7 +1,7 @@
 <template>
   <div class="mt-input-group clearfix">
     <span class="mt-input-icon-before" v-if="beforeIcon">
-      <i class="zmdi zmdi-arrow-missed"></i>
+      <i :class="['zmdi', `zmdi-${beforeIcon}`]"></i>
     </span>
     <div class="mt-input-line" :class="{'mt-input-focus': focused}">
         <input type="text" 
@@ -14,7 +14,7 @@
         >
     </div>
     <span class="mt-input-icon-after" v-if="afterIcon">
-      <i class="zmdi zmdi-globe"></i>
+      <i :class="['zmdi', `zmdi-${afterIcon}`]"></i>
     </span>
   </div>
 </template>
@@ -74,6 +74,9 @@
 <style scoped>
   .mt-input-group{
     position: relative;
+    display: table;
+    width: 100%;
+    border-collapse: separate;
     margin-bottom: 25px;
   }
   .mt-input-line {
@@ -126,5 +129,24 @@
     -webkit-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
     -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
     transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+  }
+  .mt-input-icon-before,.mt-input-icon-after {
+    display: table-cell;
+    width: 1%;
+    min-width: 42px;
+    padding: 6px 12px;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1;
+    color: #000000;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    border-bottom: 1px solid transparent;
+    border-radius: 0;
+  }
+  .mt-input-icon-before>.zmdi,.mt-input-icon-after>.zmdi {
+    position: relative;
+    top: 3px;
   }
 </style>

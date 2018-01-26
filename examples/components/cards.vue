@@ -5,13 +5,13 @@
         <mt-card title="有标题" minTitle="副标题">
           <div class="row">
             <div class="col-sm-4">
-              <mt-input placeholder="123123"></mt-input>
+              <mt-input placeholder="123123" beforeIcon="email"></mt-input>
             </div>
             <div class="col-sm-4">
-              <mt-input placeholder="123123"></mt-input>
+              <mt-input placeholder="123123" beforeIcon="email" afterIcon="email"></mt-input>
             </div>
             <div class="col-sm-4">
-              <mt-input placeholder="123123"></mt-input>
+              <mt-input placeholder="123123" afterIcon="email"></mt-input>
             </div>
           </div>
         </mt-card>
