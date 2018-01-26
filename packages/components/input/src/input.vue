@@ -3,7 +3,7 @@
     <span class="mt-input-icon-before" v-if="beforeIcon">
       <i :class="['zmdi', `zmdi-${beforeIcon}`]"></i>
     </span>
-    <div class="mt-input-line" :class="{'mt-input-focus': focused,'mt-input-have': haveText}">
+    <div class="mt-input-line" :class="{'mt-input-focus': focused,'mt-input-have': flag && haveText}">
         <input type="text" 
           class="mt-input"
           v-bind="$props"
@@ -81,11 +81,16 @@
       }
     },
     watch: {
-      value(val) {
+      'value'(val) {
         this.currentValue = val
       },
-      currentValue(val) {
+      'currentValue'(val) {
         this.haveText = val != '' ? true : false
+      },
+      'placeholder'(val) {
+        if(!this.flag) {
+          this.placeholderText = this.placeholder
+        }
       }
     }
   }

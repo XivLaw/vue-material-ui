@@ -51,7 +51,7 @@ const store = new Vuex.Store({
             4: {
                 name: 'Forms 表单元素',
                 icon: 'collection-text',
-                open: false,
+                open: true,
                 childs: {
                     0: {
                         name: 'Input 输入框',
@@ -96,7 +96,7 @@ const store = new Vuex.Store({
             8: {
                 name: 'User Interface',
                 icon: 'swap-alt',
-                open: true,
+                open: false,
                 childs: {
                     0: {
                         name: 'Colors',
