@@ -49,13 +49,13 @@ const store = new Vuex.Store({
                 haveChild: true
             },
             4: {
-                name: 'Forms',
+                name: 'Forms 表单元素',
                 icon: 'collection-text',
                 open: false,
                 childs: {
                     0: {
-                        name: 'Basic Form Elements',
-                        src: '/basic-form-elements'
+                        name: 'Input 输入框',
+                        src: '/input'
                     },
                     1: {
                         name: 'Form Components',

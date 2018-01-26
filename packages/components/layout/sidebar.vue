@@ -14,7 +14,7 @@
         :class="{
           'mt-sub-menu': val.haveChild, 
           'open': val.open, 
-          'active': src == val.src
+          'active': val.src == src
         }" 
       >
         <a @click="menuOpne(key)" v-if="val.haveChild">
