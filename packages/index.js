@@ -4,12 +4,14 @@ import Header from './components/header'
 import Sidebar from './components/sidebar'
 import Main from './components/main'
 import Card from './components/card'
+import Input from './components/input'
 
 const components = {
     Header,
     Sidebar,
     Main,
-    Card
+    Card,
+    Input
 }
 
 //组件注册方法
