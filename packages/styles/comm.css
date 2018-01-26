@@ -434,3 +434,8 @@ input:active,input:focus {
 	content: " ";
   display: table;
 }
+
+/* 表单 */
+.form-group {
+  margin-bottom: 25px;
+}

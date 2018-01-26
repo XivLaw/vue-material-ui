@@ -1,6 +1,19 @@
 <template>
   <div>
     <div class="row">
+      <div class="col-sm-12">
+        <mt-card title="有标题" minTitle="副标题">
+          <div class="col-sm-4">
+            <mt-input placeholder="123123"></mt-input>
+          </div>
+          <div class="col-sm-4">
+            <mt-input placeholder="123123"></mt-input>
+          </div>
+          <div class="col-sm-4">
+            <mt-input placeholder="123123"></mt-input>
+          </div>
+        </mt-card>
+      </div>
       <div class="col-sm-4">
         <mt-card title="有标题" minTitle="副标题">
           Cras leo sem, egestas a accumsan eget, euismod at nunc. Praesent vel mi blandit, tempus ex gravida, accumsan dui. Sed sed aliquam augue. Nullam vel suscipit purus, eu facilisis ante. Mauris nec commodo felis.
