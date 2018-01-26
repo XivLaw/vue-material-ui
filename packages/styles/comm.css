@@ -370,7 +370,7 @@ input[type=checkbox],input[type=radio] {
 	margin-top:1px\9;
 	line-height:normal
 }
-output {
+.form-control,output {
 	font-size:13px;
 	line-height:1.42857143;
 	color:#000;
@@ -433,8 +433,4 @@ input:active,input:focus {
 .clearfix:after,.clearfix:before,.form-group:after,.form-group:before {
 	content: " ";
   display: table;
-}
-/* 表单元素 */
-.form-group {
-  margin-bottom: 25px;
 }
