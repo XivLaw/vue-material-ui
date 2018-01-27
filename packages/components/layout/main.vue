@@ -72,7 +72,7 @@
     }
   }
 
-  @media screen and (max-width:425px) {
+  @media screen and (max-width:767px) {
     #main {
       padding-right: 0;
     }
