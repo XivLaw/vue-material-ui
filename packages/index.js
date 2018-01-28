@@ -5,13 +5,15 @@ import Sidebar from './components/sidebar'
 import Main from './components/main'
 import Card from './components/card'
 import Input from './components/input'
+import Button from './components/Button'
 
 const components = {
     Header,
     Sidebar,
     Main,
     Card,
-    Input
+    Input,
+    Button
 }
 
 //组件注册方法

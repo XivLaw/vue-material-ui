@@ -86,7 +86,7 @@
           <mt-input placeholder="local-phone" afterIcon="local-phone" isFlag></mt-input>
         </div>
         <div class="col-sm-4">
-          <mt-input placeholder="email pin" beforeIcon="email" afterIcon="pin" isisFlag></mt-input>
+          <mt-input placeholder="email pin" beforeIcon="email" afterIcon="pin" isFlag></mt-input>
         </div>
       </div>
       <p class="c-black">不同大小</p>

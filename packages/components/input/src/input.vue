@@ -49,8 +49,8 @@
       maxlength: Number,
       minlength: Number,
       readonly: Boolean,
-      autofocus: Boolean,
       disabled: Boolean,
+      autofocus: Boolean,
       autoComplete: {
         type: String,
         default: 'off'
