@@ -4,6 +4,7 @@ import Home from '@/components/home'
 import Typography from '@/components/typography'
 import Cards from '@/components/cards'
 import Input from '@/components/input'
+import Buttons from '@/components/buttons'
 
 Vue.use(Router)
 
@@ -26,7 +27,7 @@ const routes = [
   {
     path: '/buttons',
     name: 'buttons 按钮',
-    component: Input
+    component: Buttons
   },
   {
     path: '*',
