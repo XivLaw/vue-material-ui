@@ -24,6 +24,11 @@ const routes = [
     component: Input
   },
   {
+    path: '/buttons',
+    name: 'buttons 按钮',
+    component: Input
+  },
+  {
     path: '*',
     name: 'Home 首页',
     component: Home

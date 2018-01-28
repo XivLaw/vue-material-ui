@@ -58,8 +58,8 @@ const store = new Vuex.Store({
                         src: '/input'
                     },
                     1: {
-                        name: 'Form Components',
-                        src: '/form-components'
+                        name: 'Buttons 按钮',
+                        src: '/buttons'
                     },
                     2: {
                         name: 'Form Examples',
@@ -71,13 +71,6 @@ const store = new Vuex.Store({
                     }
                 },
                 haveChild: true
-            },
-            5: {
-                name: 'Buttons',
-                src: '/buttons',
-                icon: 'crop-16-9',
-                open: false,
-                haveChild: false
             },
             6: {
                 name: 'Alerts',
