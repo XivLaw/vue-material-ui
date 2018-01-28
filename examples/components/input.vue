@@ -38,10 +38,10 @@
         </div>
       </div>
     </mt-card>
-    <mt-card title="Flag样式的输入框" minTitle="组件内加入 flag 属性">
-      <mt-input placeholder="Small" inputSize="small" flag></mt-input>
-      <mt-input placeholder="Default" flag></mt-input>
-      <mt-input placeholder="Large" inputSize="large" flag></mt-input>
+    <mt-card title="Flag样式的输入框" minTitle="组件内加入 isFlag 属性">
+      <mt-input placeholder="Small" inputSize="small" isFlag></mt-input>
+      <mt-input placeholder="Default" isFlag></mt-input>
+      <mt-input placeholder="Large" inputSize="large" isFlag></mt-input>
     </mt-card>
     <mt-card title="Icon样式的输入框" minTitle="组件内加入 beforeIcon 或/和 afterIcon 属性">
       <div class="row">
@@ -80,19 +80,24 @@
       <p class="c-black">Flag样式</p>
       <div class="row">
         <div class="col-sm-4">
-          <mt-input placeholder="account" beforeIcon="account" flag></mt-input>
+          <mt-input placeholder="account" beforeIcon="account" isFlag></mt-input>
         </div>
         <div class="col-sm-4">
-          <mt-input placeholder="local-phone" afterIcon="local-phone" flag></mt-input>
+          <mt-input placeholder="local-phone" afterIcon="local-phone" isFlag></mt-input>
         </div>
         <div class="col-sm-4">
-          <mt-input placeholder="email pin" beforeIcon="email" afterIcon="pin" flag></mt-input>
+          <mt-input placeholder="email pin" beforeIcon="email" afterIcon="pin" isisFlag></mt-input>
         </div>
       </div>
       <p class="c-black">不同大小</p>
       <mt-input placeholder="Small" inputSize="small" beforeIcon="email"></mt-input>
       <mt-input placeholder="Default" beforeIcon="email"></mt-input>
       <mt-input placeholder="Large" inputSize="large" beforeIcon="email"></mt-input>
+    </mt-card>
+    <mt-card title="提示样式" minTitle="组件内加入 state 属性">
+      <mt-input placeholder="success" state="success" tipsText="这是一个成功样式的输入框" isFlag></mt-input>
+      <mt-input placeholder="warning" state="warning" tipsText="这是一个警告样式的输入框" isFlag></mt-input>
+      <mt-input placeholder="error" state="error" tipsText="这是一个失败样式的输入框" isFlag></mt-input>
     </mt-card>
   </div>
 </template>

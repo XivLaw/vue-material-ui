@@ -1,9 +1,15 @@
 <template>
-  <div class="mt-input-group clearfix" :class="{[`mt-input-group-${inputSize}`]: inputSize}">
+  <div 
+    class="mt-input-group clearfix" 
+    :class="{
+      [`mt-input-group-${inputSize}`]: inputSize, 
+      [`mt-state-${state}`]: state
+    }"
+  >
     <span class="mt-input-icon-before" v-if="beforeIcon">
       <i :class="['zmdi', `zmdi-${beforeIcon}`]"></i>
     </span>
-    <div class="mt-input-line" :class="{'mt-input-focus': focused,'mt-input-have': flag && haveText}">
+    <div class="mt-input-line" :class="{'mt-input-focus': focused,'mt-input-have': isFlag && haveText}">
         <input type="text" 
           class="mt-input"
           v-bind="$props"
@@ -14,8 +20,9 @@
           @change="handleChange"
           v-model="currentValue"
         >
-        <label class="mt-input-lebel" v-if="flag">{{placeholder}}</label>
+        <label class="mt-input-lebel" v-if="isFlag">{{placeholder}}</label>
     </div>
+    <small class="mt-input-tips" v-if="tipsText">{{tipsText}}</small>
     <span class="mt-input-icon-after" v-if="afterIcon">
       <i :class="['zmdi', `zmdi-${afterIcon}`]"></i>
     </span>
@@ -49,13 +56,15 @@
         default: 'off'
       },
       step: {},
+      state: String,
+      tipsText: String,
       inputSize: String,
       beforeIcon: String,
       afterIcon: String,
-      flag: Boolean
+      isFlag: Boolean
     },
     mounted() {
-      if(!this.flag) {
+      if(!this.isFlag) {
         this.placeholderText = this.placeholder
       }
       this.haveText = this.currentValue && this.currentValue != '' ? true : false
@@ -88,7 +97,7 @@
         this.haveText = val != '' ? true : false
       },
       'placeholder'(val) {
-        if(!this.flag) {
+        if(!this.isFlag) {
           this.placeholderText = this.placeholder
         }
       }
@@ -128,8 +137,17 @@
     -webkit-transition-duration: .3s;
     transition-duration: .3s;
   }
-  .mt-input-line:not([class*=has-]):after {
+  .mt-input-line:after {
     background: #2196F3;
+  }
+  .mt-state-success .mt-input-line:after{
+    background: #67BD6A;
+  }
+  .mt-state-warning .mt-input-line:after{
+    background: #FFA829;
+  }
+  .mt-state-error .mt-input-line:after{
+    background: #F6675D;
   }
   .mt-input-focus:after,.mt-input-have:after {
       -webkit-transform: scale(1);
@@ -143,7 +161,7 @@
     width: 100%;
     height: 35px;
     border: 0;
-    border-bottom: 1px solid #e0e0e0;
+    border-bottom: 1px solid #E0E0E0;
     background-color: transparent;
     font-size: 13px;
     line-height: 1.42857143;
@@ -154,6 +172,15 @@
     -webkit-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
     -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
     transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+  }
+  .mt-state-success .mt-input{
+    border-color: #67BD6A;
+  }
+  .mt-state-warning .mt-input{
+    border-color: #FFA829;
+  }
+  .mt-state-error .mt-input{
+    border-color: #F6675D;
   }
   .mt-input-group-small .mt-input {
     height: 30px;
@@ -215,5 +242,20 @@
     padding: 10px 16px;
     font-size: 17px;
     line-height: 1.3333333;
+  }
+  .mt-input-tips {
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    color: #9E9E9E;
+  }
+  .mt-state-success .mt-input-tips,.mt-state-success .mt-input-focus .mt-input-lebel {
+    color: #67BD6A;
+  }
+  .mt-state-warning .mt-input-tips,.mt-state-warning .mt-input-focus .mt-input-lebel {
+    color: #FFA829;
+  }
+  .mt-state-error .mt-input-tips,.mt-state-error .mt-input-focus .mt-input-lebel {
+    color: #F6675D;
   }
 </style>
