@@ -8,7 +8,7 @@
       [`bgm-${bg}`]: bg
     }"
   >
-    <i :class="['zmdi', `zmdi-${icon}`]"></i>
+    <i v-if="icon" :class="['zmdi', `zmdi-${icon}`]"></i>
     <slot></slot>
   </button>
 </template>
@@ -40,7 +40,32 @@
     }
   }
 </script>
-
 <style scoped>
-
+  .mt-button {
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    white-space: nowrap;
+    padding: 6px 12px;
+    font-size: 13px;
+    line-height: 1.42857143;
+    border:none;
+    border-radius: 2px;
+    color: #000000;
+    background-color: #FFFFFF;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,.16), 0 2px 10px rgba(0,0,0,.12);
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  .mt-button[class*=bgm-] {
+    color: #FFFFFF;
+  }
 </style>
