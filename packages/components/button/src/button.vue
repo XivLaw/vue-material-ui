@@ -96,16 +96,20 @@
     height: 100px;
     width: 100px;
     border-radius: 50%;
-    background: rgba(0, 0, 0, 0.2);
+    background:-webkit-radial-gradient(rgba(0,0,0,0.2) 0,rgba(0,0,0,.3) 40%,rgba(0,0,0,.4) 50%,rgba(0,0,0,.5) 60%,rgba(255,255,255,0) 70%);
+    background: -o-radial-gradient(rgba(0,0,0,0.2) 0,rgba(0,0,0,.3) 40%,rgba(0,0,0,.4) 50%,rgba(0,0,0,.5) 60%,rgba(255,255,255,0) 70%);
+    background: -moz-radial-gradient(rgba(0,0,0,0.2) 0,rgba(0,0,0,.3) 40%,rgba(0,0,0,.4) 50%,rgba(0,0,0,.5) 60%,rgba(255,255,255,0) 70%);
+    background: radial-gradient(rgba(0,0,0,0.2) 0,rgba(0,0,0,.3) 40%,rgba(0,0,0,.4) 50%,rgba(0,0,0,.5) 60%,rgba(255,255,255,0) 70%);
+    opacity: 0;
     pointer-events: none;
     content: "";
     -webkit-transform: scale(0);
     -ms-transform: scale(0);
     -o-transform: scale(0);
     transform: scale(0);
-    -webkit-transition: transform;
-    -o-transition: transform;
-    transition: transform;
+    -webkit-transition: -webkit-transform, opacity;
+    -o-transition: -o-transform, opacity;
+    transition: transform, opacity;
     -webkit-transition-duration: .8s;
     transition-duration: .8s;
     -webkit-transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -113,10 +117,11 @@
     transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
   }
   .mt-button.mt-button-down .mt-button-shadow {
-    -webkit-transform: scale(5);
-    -ms-transform: scale(5);
-    -o-transform: scale(5);
-    transform: scale(5);
+    opacity: 1;
+    -webkit-transform: scale(3);
+    -ms-transform: scale(3);
+    -o-transform: scale(3);
+    transform: scale(3);
   }
   .mt-button.mt-button-round {
     border-radius: 50%;
