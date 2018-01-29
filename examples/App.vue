@@ -8,7 +8,9 @@
       userName="XivLaw"
     ></mt-sidebar>
     <mt-main :title="$route.name">
-      <router-view></router-view>
+      <transition name="fade">
+        <router-view></router-view>
+      </transition>
     </mt-main>
   </div>
 </template>
@@ -18,3 +20,12 @@
     name: 'app'
   }
 </script>
+
+<style scoped>
+  .fade-enter-active,.fade-leave-active {
+    transition: opacity .5s;
+  }
+  .fade-enter,.fade-leave-to {
+    opacity: 0;
+  }
+</style>

@@ -173,6 +173,9 @@
     -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
     transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
   }
+  .mt-input[disabled] {
+    cursor: not-allowed;
+  }
   .mt-state-success .mt-input{
     border-color: #67BD6A;
   }
