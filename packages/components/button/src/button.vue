@@ -2,21 +2,30 @@
   <button 
     class="mt-button"
     @click="handleClick"
-    @mousedown="shadowFadeIn"
-    @mouseup="shadowFadeOut"
+    @mousedown.left="shadowFadeIn"
+    @touch="handleClick"
+    @touchstart="shadowFadeIn"
+    @touchend="shadowFadeOut"
     v-bind="$props"
     :class="{
       [`mt-button-${size}`]: size,
       [`mt-button-${buttonType}`]: buttonType,
       [`bgm-${bg}`]: bg,
-      'mt-button-text': $slots.default,
+      'mt-button-text': $slots.default && !isRound,
       'mt-button-round': isRound,
       'mt-button-down': shadowShow
     }"
   >
     <i v-if="icon" :class="['zmdi', `zmdi-${icon}`]"></i>
     <slot v-if="!isRound"></slot>
-    <span class="mt-button-shadow" :style="{top: `${shadowTop}px`, left: `${shadowLeft}px`}"></span>
+    <span 
+      class="mt-button-shadow"
+      :style="{
+        top: `${shadowTop}px`, 
+        left: `${shadowLeft}px`,
+        opacity: shadowOpacity
+      }"
+    ></span>
   </button>
 </template>
 
@@ -26,6 +35,7 @@
     data() {
       return {
         shadowShow: false,
+        shadowOpacity: 0,
         shadowTop: 0,
         shadowLeft: 0
       }
@@ -51,14 +61,23 @@
     },
     methods: {
       handleClick(event) {
+        this.shadowFadeIn(event)
+        setTimeout(() => {
+          this.shadowOpacity = 0
+          setTimeout(() => {
+            this.shadowShow = false
+          }, 300)
+        }, 500)
         this.$emit('click', event);
       },
       shadowFadeIn(event) {
         this.shadowTop = event.layerY - 50
         this.shadowLeft = event.layerX - 50
+        this.shadowOpacity = 1
         this.shadowShow = true
       },
       shadowFadeOut() {
+        this.shadowOpacity = 0
         this.shadowShow = false
       }
     }
@@ -80,7 +99,7 @@
     line-height: 1.42857143;
     border:none;
     border-radius: 2px;
-    color: #000000;
+    color: #333333;
     background-color: #FFFFFF;
     overflow: hidden;
     box-shadow: 0 2px 5px rgba(0,0,0,.16), 0 2px 10px rgba(0,0,0,.12);
@@ -100,7 +119,6 @@
     background: -o-radial-gradient(rgba(0,0,0,0.2) 0,rgba(0,0,0,.3) 40%,rgba(0,0,0,.4) 50%,rgba(0,0,0,.5) 60%,rgba(255,255,255,0) 70%);
     background: -moz-radial-gradient(rgba(0,0,0,0.2) 0,rgba(0,0,0,.3) 40%,rgba(0,0,0,.4) 50%,rgba(0,0,0,.5) 60%,rgba(255,255,255,0) 70%);
     background: radial-gradient(rgba(0,0,0,0.2) 0,rgba(0,0,0,.3) 40%,rgba(0,0,0,.4) 50%,rgba(0,0,0,.5) 60%,rgba(255,255,255,0) 70%);
-    opacity: 0;
     pointer-events: none;
     content: "";
     -webkit-transform: scale(0);
@@ -110,14 +128,10 @@
     -webkit-transition: -webkit-transform, opacity;
     -o-transition: -o-transform, opacity;
     transition: transform, opacity;
-    -webkit-transition-duration: .8s;
-    transition-duration: .8s;
-    -webkit-transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
-    -o-transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
-    transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+    -webkit-transition-duration: 1s;
+    transition-duration: 1s;
   }
   .mt-button.mt-button-down .mt-button-shadow {
-    opacity: 1;
     -webkit-transform: scale(3);
     -ms-transform: scale(3);
     -o-transform: scale(3);

@@ -5,7 +5,8 @@ import Sidebar from './components/sidebar'
 import Main from './components/main'
 import Card from './components/card'
 import Input from './components/input'
-import Button from './components/Button'
+import Button from './components/button'
+import ButtonGroup from './components/button-group'
 
 const components = {
     Header,
@@ -13,7 +14,8 @@ const components = {
     Main,
     Card,
     Input,
-    Button
+    Button,
+    ButtonGroup
 }
 
 //组件注册方法
