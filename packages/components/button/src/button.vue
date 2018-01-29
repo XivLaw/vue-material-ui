@@ -97,12 +97,8 @@
     width: 100px;
     border-radius: 50%;
     background: rgba(0, 0, 0, 0.2);
+    pointer-events: none;
     content: "";
-    -webkit-transform: translate3d(0, 0, 0);
-    -moz-transform: translate3d(0, 0, 0);
-    -ms-transform: translate3d(0, 0, 0);
-    -o-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
     -webkit-transform: scale(0);
     -ms-transform: scale(0);
     -o-transform: scale(0);
