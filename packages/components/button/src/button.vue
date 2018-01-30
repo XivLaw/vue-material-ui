@@ -145,19 +145,19 @@
     padding: 0;
     text-align: center;
   }
-  .mt-button.mt-button-large {
+  .mt-button-group-large .mt-button,.mt-button.mt-button-large {
     padding: 10px 16px;
     font-size: 17px;
     line-height: 1.3333333;
     border-radius: 2px;
   }
-  .mt-button.mt-button-small {
+  .mt-button-group-small .mt-button,.mt-button.mt-button-small {
     padding: 5px 10px;
     font-size: 12px;
     line-height: 1.5;
     border-radius: 2px;
   }
-  .mt-button.mt-button-xsmall {
+  .mt-button-group-xsmall .mt-button,.mt-button.mt-button-xsmall {
     padding: 2px 5px;
     font-size: 11px;
     line-height: 1.5;
