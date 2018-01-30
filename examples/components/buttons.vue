@@ -107,6 +107,85 @@
         <mt-button isRound icon="check" bg="blue"></mt-button>
       </div>
     </mt-card>
+    <mt-card title="按钮组" minTitle="多个按钮排成一组">
+      <p class="f-500 c-black m-b-20">基本按钮组</p>
+      <div class="btn-demo">
+        <mt-button-group>
+          <mt-button>左边</mt-button>
+          <mt-button>中间</mt-button>
+          <mt-button>右边</mt-button>
+        </mt-button-group>
+        <mt-button-group>
+          <mt-button buttonType="primary">左边</mt-button>
+          <mt-button buttonType="primary">中间</mt-button>
+          <mt-button buttonType="primary">右边</mt-button>
+        </mt-button-group>
+        <mt-button-group>
+          <mt-button buttonType="success">左边</mt-button>
+          <mt-button buttonType="success">中间</mt-button>
+          <mt-button buttonType="success">右边</mt-button>
+        </mt-button-group>
+        <mt-button-group>
+          <mt-button buttonType="warning">左边</mt-button>
+          <mt-button buttonType="warning">中间</mt-button>
+          <mt-button buttonType="warning">右边</mt-button>
+        </mt-button-group>
+        <mt-button-group>
+          <mt-button buttonType="danger">左边</mt-button>
+          <mt-button buttonType="danger">中间</mt-button>
+          <mt-button buttonType="danger">右边</mt-button>
+        </mt-button-group>
+      </div>
+      <p class="f-500 c-black m-b-20">多种大小的按钮组</p>
+      <div class="btn-demo">
+        <mt-button-group>
+          <mt-button size="large">左边</mt-button>
+          <mt-button size="large">中间</mt-button>
+          <mt-button size="large">右边</mt-button>
+        </mt-button-group>
+        <mt-button-group>
+          <mt-button buttonType="primary" size="large">左边</mt-button>
+          <mt-button buttonType="primary" size="large">中间</mt-button>
+          <mt-button buttonType="primary" size="large">右边</mt-button>
+        </mt-button-group>
+      </div>
+      <div class="btn-demo">
+        <mt-button-group>
+          <mt-button>左边</mt-button>
+          <mt-button>中间</mt-button>
+          <mt-button>右边</mt-button>
+        </mt-button-group>
+        <mt-button-group>
+          <mt-button buttonType="primary">左边</mt-button>
+          <mt-button buttonType="primary">中间</mt-button>
+          <mt-button buttonType="primary">右边</mt-button>
+        </mt-button-group>
+      </div>
+      <div class="btn-demo">
+        <mt-button-group>
+          <mt-button size="small">左边</mt-button>
+          <mt-button size="small">中间</mt-button>
+          <mt-button size="small">右边</mt-button>
+        </mt-button-group>
+        <mt-button-group>
+          <mt-button buttonType="primary" size="small">左边</mt-button>
+          <mt-button buttonType="primary" size="small">中间</mt-button>
+          <mt-button buttonType="primary" size="small">右边</mt-button>
+        </mt-button-group>
+      </div>
+      <div class="btn-demo">
+        <mt-button-group>
+          <mt-button size="xsmall">左边</mt-button>
+          <mt-button size="xsmall">中间</mt-button>
+          <mt-button size="xsmall">右边</mt-button>
+        </mt-button-group>
+        <mt-button-group>
+          <mt-button buttonType="primary" size="xsmall">左边</mt-button>
+          <mt-button buttonType="primary" size="xsmall">中间</mt-button>
+          <mt-button buttonType="primary" size="xsmall">右边</mt-button>
+        </mt-button-group>
+      </div>
+    </mt-card>
   </div>
 </template>
 
@@ -120,10 +199,10 @@
   .btn-demo {
     margin-bottom: 30px;
   }
-  .btn-demo button {
+  .btn-demo>button,.btn-demo .mt-button-group {
     margin: 0 5px 10px 0;
   }
-  .btn-colors button {
+  .btn-colors>button {
     min-width: 112px;
   }
 </style>

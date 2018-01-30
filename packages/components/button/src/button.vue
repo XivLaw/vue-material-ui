@@ -67,7 +67,7 @@
           setTimeout(() => {
             this.shadowShow = false
           }, 300)
-        }, 500)
+        }, 300)
         this.$emit('click', event);
       },
       shadowFadeIn(event) {

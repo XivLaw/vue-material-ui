@@ -1,5 +1,5 @@
 <template>
-  <div class="mt-button-group" :class="{[`mt-button-group-${size}`]: size}">
+  <div class="mt-button-group">
     <slot></slot>
   </div>
 </template>
@@ -40,5 +40,8 @@
   .mt-button-group>.mt-button:last-child:not(:first-child) {
     border-bottom-left-radius: 0;
     border-top-left-radius: 0;
+  }
+  .mt-button-group>button {
+    box-shadow: none; 
   }
 </style>
