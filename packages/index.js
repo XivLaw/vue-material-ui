@@ -7,6 +7,7 @@ import Card from './components/card'
 import Input from './components/input'
 import Button from './components/button'
 import ButtonGroup from './components/button-group'
+import Checkbox from './components/checkbox'
 
 const components = {
     Header,
@@ -15,7 +16,8 @@ const components = {
     Card,
     Input,
     Button,
-    ButtonGroup
+    ButtonGroup,
+    Checkbox
 }
 
 //组件注册方法

@@ -34,21 +34,26 @@ const store = new Vuex.Store({
             },
             3: {
                 name: 'Table',
+                src: '/table',
                 icon: 'view-list',
                 open: false,
-                childs: {
-                    0: {
-                        name: 'Normal Tables',
-                        src: '/normal-tables'
-                    },
-                    1: {
-                        name: 'Data Tables',
-                        src: '/data-tables'
-                    }
-                },
-                haveChild: true
+                haveChild: false
             },
             4: {
+                name: 'Alerts 警告',
+                src: '/alerts',
+                icon: 'comment-more',
+                open: false,
+                haveChild: false
+            },
+            5: {
+                name: 'Dialogs 对话框',
+                src: '/dialogs',
+                icon: 'comment-text-alt',
+                open: false,
+                haveChild: false
+            },
+            6: {
                 name: 'Forms 表单元素',
                 icon: 'collection-text',
                 open: true,
@@ -62,58 +67,32 @@ const store = new Vuex.Store({
                         src: '/buttons'
                     },
                     2: {
-                        name: 'Form Examples',
-                        src: '/form-examples'
+                        name: 'Select 选择菜单',
+                        src: '/select'
                     },
                     3: {
-                        name: 'Form Validation',
+                        name: 'Checkbox/Radio 单选/多选',
                         src: '/form-validation'
                     }
                 },
                 haveChild: true
             },
-            6: {
-                name: 'Alerts',
-                src: '/alerts',
-                icon: 'comment-more',
-                open: false,
-                haveChild: false
-            },
             7: {
-                name: 'Dialogs',
-                src: '/dialogs',
-                icon: 'comment-text-alt',
-                open: false,
-                haveChild: false
-            },
-            8: {
                 name: 'User Interface',
                 icon: 'swap-alt',
-                open: false,
+                open: true,
                 childs: {
                     0: {
-                        name: 'Colors',
+                        name: 'Colors 颜色',
                         src: '/colors'
                     },
-                    1: {
-                        name: 'Box Shadow',
-                        src: '/box-shadow'
-                    },
                     2: {
-                        name: 'Icons',
+                        name: 'Icons 标志',
                         src: '/icons'
                     },
                     3: {
-                        name: 'Preloaders',
-                        src: 'preloaders'
-                    },
-                    4: {
-                        name: 'Notifications',
-                        src: 'notification'
-                    },
-                    5: {
-                        name: 'Components',
-                        src: 'components'
+                        name: 'Others 其他',
+                        src: 'others'
                     }
                 },
                 haveChild: true
