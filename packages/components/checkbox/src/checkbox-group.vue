@@ -1,5 +1,5 @@
 <template>
-  <div class="el-checkbox-group" @change="handleChange">
+  <div class="el-checkbox-group" @change="handleInput">
     <slot></slot>
   </div>
 </template>
@@ -17,9 +17,9 @@
       disabled: Boolean
     },
     methods: {
-      handleChange(event, val) {
+      handleInput(event, val) {
         console.log(arguments)
-        this.$emit('change', event);
+        this.$emit('input', event);
       }
     }
   }

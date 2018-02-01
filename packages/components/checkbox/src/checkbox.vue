@@ -55,8 +55,7 @@
           if(parent.$options.name !== 'MtCheckboxGroup') {
             parent = parent.$parent
           }else {
-            this.checkboxGroup = parent
-            return this.checkboxGroup
+            return parent
           }
         }
         return false
