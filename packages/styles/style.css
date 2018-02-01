@@ -486,6 +486,7 @@
   position: relative;
   display: inline-block;
   vertical-align: middle;
+  margin-bottom: 25px;
   box-shadow: 0 1px 4px 0 rgba(0,0,0,.3);
 }
 .mt-buttongroup .mt-button {
@@ -639,6 +640,9 @@
 }
 .mt-radio {
   min-height: 19px;
+}
+.mt-checkbox+.mt-checkbox,.mt-radio+.mt-radio {
+  margin-top: -5px;
 }
 .mt-checkbox.mt-check-inline,.mt-radio.mt-check-inline {
   display: inline-block;

@@ -8,7 +8,7 @@
     }"
   >
     <label>
-        <input type="checkbox" @change="handleChange" v-bind="$props" v-model="currentValue">
+        <input type="checkbox" @change="handleChange" v-bind="$props" v-model="model">
         <i class="mt-check-helper"></i>
         <slot></slot>
     </label>
@@ -20,11 +20,11 @@
     name: 'MtCheckbox',
     data() {
       return {
-        currentValue: this.value
+        currentValue: false
       }
     },
     props: {
-      value: Boolean,
+      value: {},
       disabled: Boolean,
       checked: Boolean,
       id: String,
@@ -37,11 +37,40 @@
       checkType: String
     },
     computed: {
-
+      model: {
+        get() {
+          return this.isGroup
+            ? this.store : this.value !== undefined
+              ? this.value : this.currentValue
+        },
+        set(val) {
+          if (this.isGroup) {
+            this.dispatch('ElCheckboxGroup', 'input', [val])
+          } else {
+            this.$emit('change', val)
+            this.currentValue = val
+          }
+        }
+      },
+      isGroup() {
+        let parent = this.$parent
+        while(parent) {
+          if(parent.$options.componentName !== 'MtCheckboxGroup') {
+            parent = parent.$parent
+          }else {
+            this.checkboxGroup = parent
+            return true
+          }
+        }
+        return false
+      },
+      store() {
+        return this.checkboxGroup ? this.checkboxGroup.value : this.value;
+      }
     },
     methods: {
-      handleChange() {
-        this.$emit('change', this.currentValue)
+      handleChange(event, value) {
+        this.$emit('change', 123)
       }
     }
   }
