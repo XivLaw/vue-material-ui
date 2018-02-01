@@ -64,7 +64,7 @@
     },
     methods: {
       handleChange(event) {
-        this.$emit('change', 123)
+        this.$emit('input', this.currenValue)
       }
     }
   }

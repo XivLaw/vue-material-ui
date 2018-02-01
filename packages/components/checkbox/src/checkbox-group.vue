@@ -18,7 +18,7 @@
     },
     methods: {
       handleChange(event, val) {
-        console.log(event)
+        console.log(arguments)
         this.$emit('change', event);
       }
     }
