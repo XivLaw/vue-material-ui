@@ -1,9 +1,6 @@
 <template>
   <div>
     <mt-card title="按钮" minTitle="基础的按钮">
-      <mt-checkbox-group @change="change" v-model="check">
-        <mt-checkbox></mt-checkbox>
-      </mt-checkbox-group>
       <p class="f-500 c-black m-b-20">Bootstrap 颜色样式</p>
       <div class="btn-demo">
         <mt-button>DEFAULT</mt-button>
@@ -194,16 +191,6 @@
 
 <script>
   export default {
-    data() {
-      return {
-        check: ['123']
-      }
-    },
-    methods: {
-      change(val){
-        alert()
-      }
-    }
   }
 </script>
 

@@ -9,7 +9,7 @@
     name: 'MtCheckboxGroup',
     data() {
       return {
-        currentValue: this.value
+        currentGroupValue: this.value
       }
     },
     props: {
@@ -17,9 +17,16 @@
       disabled: Boolean
     },
     methods: {
-      handleInput(event, val) {
-        console.log(arguments)
-        this.$emit('input', event);
+      updateVal(val, bool){
+        if(bool) {
+          this.currentGroupValue.push(val)
+        }else {
+          let key = this.currentGroupValue.indexOf(val)
+          this.currentGroupValue.splice(key, 1)
+        }
+      },
+      handleInput(event) {
+        this.$emit('change', this.currentGroupValue, event);
       }
     }
   }

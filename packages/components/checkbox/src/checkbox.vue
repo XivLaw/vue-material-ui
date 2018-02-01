@@ -41,7 +41,7 @@
         get() {
           let thisGroup = this.isGroup
           return thisGroup
-            ? thisGroup.value.indexOf(this.value) > -1 
+            ? thisGroup.currentGroupValue.indexOf(this.value) > -1 
               ? true : false
                 : this.value
         },
@@ -63,7 +63,11 @@
     },
     methods: {
       handleChange(event) {
-        this.$emit('input', this.currenValue)
+        if(this.isGroup) {
+          this.isGroup.updateVal(this.value, this.currenValue)
+        }else {
+          this.$emit('change', this.currenValue, event)
+        }
       }
     }
   }
