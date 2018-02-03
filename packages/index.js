@@ -9,6 +9,8 @@ import Button from './components/button'
 import ButtonGroup from './components/button-group'
 import Checkbox from './components/checkbox'
 import CheckboxGroup from './components/checkbox-group'
+import radio from './components/radio'
+import radioGroup from './components/radio-group'
 
 const components = {
     Header,
@@ -19,7 +21,9 @@ const components = {
     Button,
     ButtonGroup,
     Checkbox,
-    CheckboxGroup
+    CheckboxGroup,
+    radio,
+    radioGroup
 }
 
 //组件注册方法

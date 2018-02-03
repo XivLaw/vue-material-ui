@@ -3,7 +3,7 @@
     class="mt-input-group clearfix" 
     :class="{
       [`mt-input-group-${inputSize}`]: inputSize, 
-      [`mt-state-${state}`]: state
+      [`mt-input-${state}`]: state
     }"
   >
     <span class="mt-input-icon-before" v-if="beforeIcon">
