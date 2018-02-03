@@ -33,27 +33,6 @@ const store = new Vuex.Store({
                 haveChild: false
             },
             3: {
-                name: 'Table',
-                src: '/table',
-                icon: 'view-list',
-                open: false,
-                haveChild: false
-            },
-            4: {
-                name: 'Alerts 警告',
-                src: '/alerts',
-                icon: 'comment-more',
-                open: false,
-                haveChild: false
-            },
-            5: {
-                name: 'Dialogs 对话框',
-                src: '/dialogs',
-                icon: 'comment-text-alt',
-                open: false,
-                haveChild: false
-            },
-            6: {
                 name: 'Forms 表单元素',
                 icon: 'collection-text',
                 open: true,
@@ -76,6 +55,27 @@ const store = new Vuex.Store({
                     }
                 },
                 haveChild: true
+            },
+            4: {
+                name: 'Table',
+                src: '/table',
+                icon: 'view-list',
+                open: false,
+                haveChild: false
+            },
+            5: {
+                name: 'Alerts 警告',
+                src: '/alerts',
+                icon: 'comment-more',
+                open: false,
+                haveChild: false
+            },
+            6: {
+                name: 'Dialogs 对话框',
+                src: '/dialogs',
+                icon: 'comment-text-alt',
+                open: false,
+                haveChild: false
             },
             7: {
                 name: 'User Interface',
