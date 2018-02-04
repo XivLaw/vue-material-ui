@@ -22,7 +22,6 @@
         if(!Array.isArray(this.currentGroupValue)) {
           this.currentGroupValue = [this.currentGroupValue]
         }
-        console.log(this.currentGroupValue)
         if(bool) {
           this.currentGroupValue.push(val)
         }else {
