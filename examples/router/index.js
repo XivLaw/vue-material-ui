@@ -5,6 +5,8 @@ import Typography from '@/components/typography'
 import Cards from '@/components/cards'
 import Input from '@/components/input'
 import Buttons from '@/components/buttons'
+import Colors from '@/components/colors'
+import Icons from '@/components/icons'
 
 Vue.use(Router)
 
@@ -26,8 +28,18 @@ const routes = [
   },
   {
     path: '/buttons',
-    name: 'buttons 按钮',
+    name: 'Buttons 按钮',
     component: Buttons
+  },
+  {
+    path: '/colors',
+    name: 'Colors 颜色',
+    component: Colors
+  },
+  {
+    path: '/icons',
+    name: 'Icons 图标',
+    component: Icons
   },
   {
     path: '*',

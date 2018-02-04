@@ -87,7 +87,7 @@ const store = new Vuex.Store({
                         src: '/colors'
                     },
                     2: {
-                        name: 'Icons 标志',
+                        name: 'Icons 图标',
                         src: '/icons'
                     },
                     3: {
