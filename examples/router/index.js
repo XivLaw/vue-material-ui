@@ -5,6 +5,7 @@ import Typography from '@/components/typography'
 import Cards from '@/components/cards'
 import Input from '@/components/input'
 import Buttons from '@/components/buttons'
+import Check from '@/components/check'
 import Colors from '@/components/colors'
 import Icons from '@/components/icons'
 
@@ -30,6 +31,11 @@ const routes = [
     path: '/buttons',
     name: 'Buttons 按钮',
     component: Buttons
+  },
+  {
+    path: '/check',
+    name: 'Checkbox/Radio 单选/多选',
+    component: Check
   },
   {
     path: '/colors',

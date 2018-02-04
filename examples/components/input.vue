@@ -1,9 +1,26 @@
 <template>
   <div>
     <mt-card title="输入框" minTitle="默认的输入框">
-      <mt-input placeholder="inputSize=&quot;small&quot;" inputSize="small"></mt-input>
-      <mt-input placeholder="默认"></mt-input>
-      <mt-input placeholder="inputSize=&quot;large&quot;" inputSize="large"></mt-input>
+      <mt-input 
+        placeholder="inputSize=&quot;small&quot;" 
+        inputSize="small"  
+        :tipsText="`value=&quot;${inputSmall}&quot;`" 
+        v-model="inputSmall"
+      >
+      </mt-input>
+      <mt-input 
+        placeholder="Default" 
+        :tipsText="`value=&quot;${inputDefault}&quot;`" 
+        v-model="inputDefault"
+      >
+      </mt-input>
+      <mt-input 
+        placeholder="inputSize=&quot;large&quot;" 
+        inputSize="large"
+        :tipsText="`value=&quot;${inputLarge}&quot;`" 
+        v-model="inputLarge"
+      >
+      </mt-input>
       <div class="row">
         <div class="col-sm-4">
           <mt-input placeholder="col-sm-4"></mt-input>
@@ -104,7 +121,13 @@
 
 <script>
   export default {
-
+    data() {
+      return {
+        inputSmall: 'Small',
+        inputDefault: 'Default',
+        inputLarge: 'Large',
+      }
+    },
   }
 </script>
 

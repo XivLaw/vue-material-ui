@@ -3,12 +3,17 @@
     class="mt-checkbox" 
     :class="{
       'mt-check-disabled': disabled,
-      'mt-check-inline': inline,
-      [`mt-check-${checkType}`]: checkType,
+      'mt-check-inline': isInline,
+      [`mt-check-${state}`]: state,
     }"
   >
     <label>
-        <input type="checkbox" @change="handleChange" v-bind="$props" v-model="getCurrenValue">
+        <input type="checkbox" 
+          @change="handleChange" 
+          v-bind="$props" 
+          :disabled="isDisabled"
+          v-model="getCurrenValue"
+        >
         <i class="mt-check-helper"></i>
         <slot></slot>
     </label>
@@ -30,11 +35,8 @@
       id: String,
       name: String,
       from: String,
-      inline: {
-        type: Boolean,
-        default: true
-      },
-      checkType: String
+      inline: Boolean,
+      state: String
     },
     computed: {
       getCurrenValue: {
@@ -59,14 +61,19 @@
           }
         }
         return false
+      },
+      isDisabled() {
+        return this.disabled || this.isGroup.disabled
+      },
+      isInline() {
+        return this.inline || this.isGroup.inline
       }
     },
     methods: {
       handleChange(event) {
+        this.$emit('input', this.currenValue, event)
         if(this.isGroup) {
           this.isGroup.updateVal(this.value, this.currenValue)
-        }else {
-          this.$emit('change', this.currenValue, event)
         }
       }
     }

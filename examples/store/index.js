@@ -51,7 +51,7 @@ const store = new Vuex.Store({
                     },
                     3: {
                         name: 'Checkbox/Radio 单选/多选',
-                        src: '/form-validation'
+                        src: '/check'
                     }
                 },
                 haveChild: true

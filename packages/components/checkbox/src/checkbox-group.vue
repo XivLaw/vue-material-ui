@@ -1,5 +1,5 @@
 <template>
-  <div class="el-checkbox-group" @change="handleInput">
+  <div class="mt-checkbox-group" @change="handleChange">
     <slot></slot>
   </div>
 </template>
@@ -14,7 +14,8 @@
     },
     props: {
       value: {},
-      disabled: Boolean
+      disabled: Boolean,
+      inline: Boolean
     },
     methods: {
       updateVal(val, bool){
@@ -25,7 +26,7 @@
           this.currentGroupValue.splice(key, 1)
         }
       },
-      handleInput(event) {
+      handleChange(event) {
         this.$emit('change', this.currentGroupValue, event);
       }
     }

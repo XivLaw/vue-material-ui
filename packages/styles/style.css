@@ -629,6 +629,9 @@
 }
 
 /* 单选框/多选框 */
+.mt-checkbox-group,.mt-radio-group {
+  margin-bottom: 20px;
+}
 .mt-checkbox,.mt-radio {
   position: relative;
   display: block;
@@ -666,6 +669,9 @@
   opacity: .6;
   filter: alpha(opacity=60);
 }
+.mt-checkbox.mt-check-disabled label,.mt-radio.mt-check-disabled label {
+  cursor: not-allowed;
+}
 .mt-checkbox input,.mt-radio input {
   position: absolute;
   top: 0;
@@ -692,7 +698,7 @@
     content: "";
 }
 .mt-checkbox input:checked+.mt-check-helper:before,.mt-radio input:checked+.mt-check-helper:before {
-    border-color: #009688;
+    border-color: #2196F3;
 }
 .mt-checkbox .mt-check-helper:before,.mt-radio .mt-check-helper:before {
     left: 0;
@@ -728,7 +734,7 @@
   font-family: Material-Design-Iconic-Font;
 }
 .mt-checkbox input:checked+.mt-check-helper:before {
-  background-color: #009688;
+  background-color: #2196F3;
 }
 .mt-checkbox input:checked+.mt-check-helper:after {
   opacity: 1;
@@ -747,7 +753,7 @@
 .mt-radio .mt-check-helper:after {
   width: 9px;
   height: 9px;
-  background: #009688;
+  background: #2196F3;
   border-radius: 50%;
   top: 4px;
   left: 5px;
@@ -771,13 +777,13 @@
 .mt-check-error {
   color: #F6675D;
 }
-.mt-checkbox.mt-check-success input:checked+.mt-check-helper:before,.mt-radio.mt-check-success input:checked+.mt-check-helper:before {
+.mt-checkbox.mt-check-success input+.mt-check-helper:before,.mt-radio.mt-check-success input+.mt-check-helper:before,.mt-checkbox.mt-check-success input:checked+.mt-check-helper:before,.mt-radio.mt-check-success input:checked+.mt-check-helper:before {
     border-color: #67BD6A;
 }
-.mt-checkbox.mt-check-warning input:checked+.mt-check-helper:before,.mt-radio.mt-check-warning input:checked+.mt-check-helper:before {
+.mt-checkbox.mt-check-warning input+.mt-check-helper:before,.mt-radio.mt-check-warning input+.mt-check-helper:before,.mt-checkbox.mt-check-warning input:checked+.mt-check-helper:before,.mt-radio.mt-check-warning input:checked+.mt-check-helper:before {
     border-color: #FFA829;
 }
-.mt-checkbox.mt-check-error input:checked+.mt-check-helper:before,.mt-radio.mt-check-error input:checked+.mt-check-helper:before {
+.mt-checkbox.mt-check-error input+.mt-check-helper:before,.mt-radio.mt-check-error input+.mt-check-helper:before,.mt-checkbox.mt-check-error input:checked+.mt-check-helper:before,.mt-radio.mt-check-error input:checked+.mt-check-helper:before {
     border-color: #F6675D;
 }
 .mt-checkbox.mt-check-success input:checked+.mt-check-helper:before,.mt-radio.mt-check-success .mt-check-helper:after {

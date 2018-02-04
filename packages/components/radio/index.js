@@ -1,3 +1,3 @@
-import Checkbox from './src/radio'
+import Radio from './src/radio'
 
-export default Checkbox
+export default Radio
