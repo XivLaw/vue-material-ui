@@ -5,7 +5,6 @@ import Sidebar from './components/sidebar'
 import Main from './components/main'
 import Card from './components/card'
 import table from './components/table'
-import tableColumn from './components/table-column'
 import Input from './components/input'
 import Button from './components/button'
 import ButtonGroup from './components/button-group'
@@ -21,7 +20,6 @@ const components = {
     Main,
     Card,
     table,
-    tableColumn,
     Input,
     Button,
     ButtonGroup,

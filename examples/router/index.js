@@ -6,6 +6,7 @@ import Cards from '@/components/cards'
 import Input from '@/components/input'
 import Buttons from '@/components/buttons'
 import Check from '@/components/check'
+import Table from '@/components/table'
 import Alert from '@/components/alert'
 import Colors from '@/components/colors'
 import Icons from '@/components/icons'
@@ -22,6 +23,11 @@ const routes = [
     path: '/cards',
     name: 'Cards 卡片样式',
     component: Cards
+  },
+  {
+    path: '/table',
+    name: 'Table 表格',
+    component: Table
   },
   {
     path: '/alert',
