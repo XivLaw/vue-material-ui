@@ -43,9 +43,10 @@
         get() {
           let thisGroup = this.isGroup
           return thisGroup
-            ? thisGroup.currentGroupValue.indexOf(this.value) > -1 
-              ? true : false
-                : this.value
+            ? thisGroup.currentGroupValue 
+              && thisGroup.currentGroupValue.indexOf(this.value) > -1 
+                ? true : false
+                  : this.value
         },
         set(val) {
           this.currenValue = val

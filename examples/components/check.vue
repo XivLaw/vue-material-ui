@@ -30,12 +30,12 @@
       </mt-radio-group>
       <p class="c-black f-500 m-b-5">state样式</p>
       <small>在标签内写入 state 属性</small><br><br>
-      <mt-checkbox class="m-r-20" state="success" inline>成功</mt-checkbox>
-      <mt-checkbox class="m-r-20" state="warning" inline>警告</mt-checkbox>
-      <mt-checkbox class="m-r-20" state="error" inline>错误</mt-checkbox>
-      <mt-radio class="m-r-20" state="success" inline>成功</mt-radio>
-      <mt-radio class="m-r-20" state="warning" inline>警告</mt-radio>
-      <mt-radio class="m-r-20" state="error" inline>错误</mt-radio>
+      <mt-checkbox class="m-r-20 m-b-20" state="success" inline>成功</mt-checkbox>
+      <mt-checkbox class="m-r-20 m-b-20" state="warning" inline>警告</mt-checkbox>
+      <mt-checkbox class="m-r-20 m-b-20" state="error" inline>错误</mt-checkbox>
+      <mt-radio class="m-r-20 m-b-20" state="success" inline>成功</mt-radio>
+      <mt-radio class="m-r-20 m-b-20" state="warning" inline>警告</mt-radio>
+      <mt-radio class="m-r-20 m-b-20" state="error" inline>错误</mt-radio>
     </mt-card>
   </div>
 </template>

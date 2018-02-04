@@ -655,6 +655,7 @@
 .mt-checkbox label,.mt-radio label {
   display: block;
   padding-left: 30px;
+  cursor: pointer;
 }
 .mt-checkbox.mt-check-inline label,.mt-radio.mt-check-inline label  {
   position: relative;
@@ -663,13 +664,12 @@
   margin-top: 0;
   vertical-align: top;
   font-weight: 400;
-  cursor: pointer;
 }
 .mt-checkbox.mt-check-disabled,.mt-radio.mt-check-disabled {
   opacity: .6;
   filter: alpha(opacity=60);
 }
-.mt-checkbox.mt-check-disabled label,.mt-radio.mt-check-disabled label {
+.mt-checkbox.mt-check-disabled label,.mt-checkbox.mt-check-disabled input,.mt-radio.mt-check-disabled label,.mt-radio.mt-check-disabled input {
   cursor: not-allowed;
 }
 .mt-checkbox input,.mt-radio input {
@@ -794,4 +794,52 @@
 }
 .mt-checkbox.mt-check-error input:checked+.mt-check-helper:before,.mt-radio.mt-check-error .mt-check-helper:after {
   background: #F6675D;
+}
+
+/* 警告 */
+.mt-alert {
+  font-size: 13px;
+  margin-bottom: 18px;
+  padding: 15px 30px;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  background-color: #2196F3;
+  color:#FFFFFF;
+}
+.mt-alert.mt-alert-closable {
+  padding-right: 35px;
+}
+.mt-alert-close {
+  float: right;
+  position: relative;
+  top: -2px;
+  right: -21px;
+  padding: 0;
+  cursor: pointer;
+  background: 0 0;
+  border: 0;
+  font-size: 19.5px;
+  line-height: 1;
+  font-weight: 400;
+  text-shadow: none;
+  color: inherit;
+  opacity: .5;
+  filter: alpha(opacity=50);
+  -webkit-appearance: none;
+}
+.mt-alert-close:hover {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+.mt-alert-close span {
+  cursor: pointer;
+}
+.mt-alert-success {
+  background-color: #4CAF50;
+}
+.mt-alert-warning {
+  background-color: #FFC107;
+}
+.mt-alert-error {
+  background-color: #F44336;
 }

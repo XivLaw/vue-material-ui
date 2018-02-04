@@ -64,8 +64,8 @@ const store = new Vuex.Store({
                 haveChild: false
             },
             5: {
-                name: 'Alerts 警告',
-                src: '/alerts',
+                name: 'Alert 警告',
+                src: '/alert',
                 icon: 'comment-more',
                 open: false,
                 haveChild: false

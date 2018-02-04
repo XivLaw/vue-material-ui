@@ -19,12 +19,17 @@
     },
     methods: {
       updateVal(val, bool){
+        if(!Array.isArray(this.currentGroupValue)) {
+          this.currentGroupValue = [this.currentGroupValue]
+        }
+        console.log(this.currentGroupValue)
         if(bool) {
           this.currentGroupValue.push(val)
         }else {
           let key = this.currentGroupValue.indexOf(val)
           this.currentGroupValue.splice(key, 1)
         }
+        this.$emit('input', this.currentGroupValue)
       },
       handleChange(event) {
         this.$emit('change', this.currentGroupValue, event);
