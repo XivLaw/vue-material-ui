@@ -6,7 +6,11 @@
         <small v-if="minTitle">{{minTitle}}</small>
       </h2>
     </div>
+    <div v-if="table" class="mt-card-table">
+      <slot></slot>
+    </div>
     <div 
+      v-else
       class="mt-card-body clearfix" 
       :class="{
         'mt-card-padding': !title || bg, 
@@ -24,6 +28,7 @@
       props: {
         title: String,
         minTitle: String,
+        table: Boolean,
         bg: {
           type: String,
           validator (val) {
