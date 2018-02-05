@@ -8,6 +8,7 @@ import Buttons from '@/components/buttons'
 import Check from '@/components/check'
 import Table from '@/components/table'
 import Alert from '@/components/alert'
+import Dialogs from '@/components/dialogs'
 import Colors from '@/components/colors'
 import Icons from '@/components/icons'
 
@@ -33,6 +34,11 @@ const routes = [
     path: '/alert',
     name: 'Alert 警告',
     component: Alert
+  },
+  {
+    path: '/dialogs',
+    name: 'Dialogs 对话框',
+    component: Dialogs
   },
   {
     path: '/input',

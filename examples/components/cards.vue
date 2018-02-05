@@ -94,7 +94,16 @@
 
 <script>
   export default {
-    
+    data() {
+      return {
+        dialog: true
+      }
+    },
+    methods: {
+      click() {
+        this.dialog = true
+      }
+    }
   }
 </script>
 

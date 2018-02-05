@@ -310,7 +310,7 @@
 .mt-card-body{
   padding-top: 0;
 }
-.mt-card-padding{
+.mt-card-body.mt-card-padding{
   padding-top: 18px;
 }
 .mt-card-table {
@@ -328,12 +328,18 @@
 }
 @media screen and (min-width:768px) {
   .mt-card-header,.mt-card-body {
-    padding: 25px 27px;
+    padding:0px 25px 27px;
+  }
+  .mt-card-header {
+    padding-top: 25px;
   }
 }
 @media screen and (max-width:991px) {
   .mt-card-header,.mt-card-body {
-    padding: 18px;
+    padding: 0 18px 18px 18px;
+  }
+  .mt-card-header {
+    padding-top: 18px;
   }
 }
 
@@ -915,5 +921,92 @@
   }
   .mt-table>tbody>tr>td,.mt-table>tfoot>tr>td,.mt-table>thead>tr>th {
     white-space: nowrap;
+  }
+}
+
+/* dialog */
+.mt-dialog-modal {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  position: fixed;
+  z-index: 1050;
+  -webkit-overflow-scrolling: touch;
+  outline: 0;
+  background: rgba(0, 0, 0, .5);
+}
+.mt-dialog {
+  position: relative;
+  width: auto;
+  margin: 15px;
+  margin-top: 85px;
+}
+.mt-dialog-content {
+  position: relative;
+  background-color: #FFFFFF;
+  box-shadow: 0 5px 20px rgba(0,0,0,.31);
+  border-radius: 3px;
+  border: 0;
+  background-clip: padding-box;
+  outline: 0;
+}
+.mt-dialog-header {
+  padding: 23px 26px;
+}
+.mt-dialog-title {
+  margin: 0;
+  line-height: transparent;
+}
+.mt-dialog-body {
+  position: relative;
+  padding: 0 26px 10px;
+  max-height: 60vh;
+  overflow: auto;
+}
+.mt-dialog-padding {
+  padding-top: 20px;
+}
+.mt-dialog-footer {
+  padding: 15px;
+  text-align: right;
+}
+.mt-dialog-footer button {
+  font-size: 14px;
+  color: #2196F3;
+  font-weight: 500;
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.mt-dialog-footer button+button {
+  margin-left: 5px;
+  margin-bottom: 0;
+}
+.mt-dialog-enter-active,.mt-dialog-leave-active {
+  transition: opacity .3s;
+}
+.mt-dialog-enter,.mt-dialog-leave-to {
+  opacity: 0;
+}
+.mt-dialog-content[class*=bgm-],.mt-dialog-content[class*=bgm-] .mt-dialog-title,.mt-dialog-content[class*=bgm-] .mt-dialog-footer button {
+  color: #FFFFFF;
+}
+@media (min-width: 768px){
+  .mt-dialog {
+      width: 600px;
+      margin: 30px auto;
+      margin-top: 85px;
+  }
+  .mt-dialog-small {
+    width: 300px;
+  }
+  .mt-dialog-large {
+    width: 900px;
+  }
+  .mt-dialog-content {
+    -webkit-box-shadow: 0 5px 15px rgba(0,0,0,.5);
+    box-shadow: 0 5px 15px rgba(0,0,0,.5);
   }
 }

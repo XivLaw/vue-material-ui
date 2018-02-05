@@ -60,17 +60,17 @@
       }
     },
     methods: {
-      handleClick(event) {
-        this.shadowFadeIn(event)
+      handleClick() {
+        this.shadowFadeIn()
         setTimeout(() => {
           this.shadowOpacity = 0
           setTimeout(() => {
             this.shadowShow = false
           }, 300)
         }, 300)
-        this.$emit('click', event);
+        this.$emit('click');
       },
-      shadowFadeIn(event) {
+      shadowFadeIn() {
         this.shadowTop = event.layerY - 50
         this.shadowLeft = event.layerX - 50
         this.shadowOpacity = 1

@@ -13,6 +13,7 @@ import CheckboxGroup from './components/checkbox-group'
 import Radio from './components/radio'
 import RadioGroup from './components/radio-group'
 import Alert from './components/alert'
+import Dialog from './components/dialog'
 
 const components = {
     Header,
@@ -27,7 +28,8 @@ const components = {
     CheckboxGroup,
     Radio,
     RadioGroup,
-    Alert
+    Alert,
+    Dialog
 }
 
 //组件注册方法
