@@ -714,7 +714,7 @@
     border-color: #2196F3;
 }
 .mt-checkbox .mt-check-helper:before,.mt-radio .mt-check-helper:before {
-    left: 0;
+    left: 1px;
     border: 2px solid #7A7A7A;
 }
 .mt-check-inline:before,.mt-checkbox label:before,.mt-check-helper:after,.mt-check-helper:before,.mt-radio label:before {
@@ -740,7 +740,7 @@
   content: '\f26b';
   position: absolute;
   font-size: 12px;
-  left: 2px;
+  left: 3px;
   top: 0;
   color: #FFFFFF;
   font-weight: 700;
@@ -769,7 +769,7 @@
   background: #2196F3;
   border-radius: 50%;
   top: 4px;
-  left: 5px;
+  left: 6px;
   -webkit-transform: scale(0);
   -ms-transform: scale(0);
   -o-transform: scale(0);
