@@ -14,6 +14,12 @@
         <mt-radio class="m-r-20" val="梨" disabled>这是一个梨</mt-radio>
         {{radio1}}
       </mt-radio-group>
+       <mt-radio-group v-model="radio1">
+        <mt-radio class="m-r-20" val="苹果">这是一个苹果</mt-radio>
+        <mt-radio class="m-r-20" val="香蕉">这是一个香蕉</mt-radio>
+        <mt-radio class="m-r-20" val="梨" disabled>这是一个梨</mt-radio>
+        {{radio1}}
+      </mt-radio-group>
       <p class="c-black f-500 m-b-5">inline样式</p>
       <small>在标签内写入 inline 属性</small><br><br>
       <mt-checkbox-group v-model="checkbox2" inline>
