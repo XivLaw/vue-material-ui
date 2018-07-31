@@ -2,6 +2,6 @@
 @import url("pub.css");
 @import url("grid.css");
 @import url("layout.css");
-@import url("material-design-iconic-font/dist/css/material-design-iconic-font.min.css");
+@import url("../../node_modules/material-design-iconic-font/dist/css/material-design-iconic-font.min.css");
 
 @import url("style.css");
