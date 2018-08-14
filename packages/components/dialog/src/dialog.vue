@@ -1,7 +1,7 @@
 <template>
   <transition name="mt-dialog">
-    <div class="mt-dialog-modal" @keydown.esc="close" v-show="show">
-      <div class="mt-dialog" :class="{[`mt-dialog-${size}`]: size}">
+    <div class="mt-dialog-modal" @click="close" v-show="show">
+      <div class="mt-dialog" :class="{[`mt-dialog-${size}`]: size}" @click.stop>
         <div class="mt-dialog-content" :class="{[`bgm-${bg}`]: bg}">
           <div class="mt-dialog-header" v-if="title">
             <h4 class="mt-dialog-title">{{title}}</h4>
