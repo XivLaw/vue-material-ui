@@ -44,6 +44,12 @@
         default: '取消'
       }
     },
+    watch: {
+      'value'(val) {
+        this.show = val
+        this.$emit('input', val)
+      }
+    },
     methods: {
       close() {
         this.show = false
@@ -55,13 +61,16 @@
       cancel(event) {
         this.close()
         this.$emit('cancel', event)
+      },
+      keydown(e) {
+        this.close()
       }
     },
-    watch: {
-      'value'(val) {
-        this.show = val
-        this.$emit('input', val)
-      }
+    mounted() {
+      document.addEventListener('keydown', this.keydown);
+    },
+    beforeDestroy() {
+      document.removeEventListener('keydown', this.keydown);
     }
   }
 </script>
