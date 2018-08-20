@@ -1,3 +1,3 @@
-import Select from '../src/radio'
+import Select from './src/select'
 
 export default Select
