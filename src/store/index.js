@@ -45,10 +45,10 @@ const store = new Vuex.Store({
                         name: 'Buttons 按钮',
                         src: '/buttons'
                     },
-                    // 2: {
-                    //     name: 'Select 选择菜单',
-                    //     src: '/select'
-                    // },
+                    2: {
+                        name: 'Select 选择菜单',
+                        src: '/select'
+                    },
                     3: {
                         name: 'Checkbox/Radio 单选/多选',
                         src: '/check'

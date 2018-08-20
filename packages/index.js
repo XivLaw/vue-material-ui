@@ -6,6 +6,7 @@ import Main from './components/main'
 import Card from './components/card'
 import table from './components/table'
 import Input from './components/input'
+import Select from './components/select'
 import Button from './components/button'
 import ButtonGroup from './components/button-group'
 import Checkbox from './components/checkbox'
@@ -22,6 +23,7 @@ const components = {
     Card,
     table,
     Input,
+    Select,
     Button,
     ButtonGroup,
     Checkbox,
