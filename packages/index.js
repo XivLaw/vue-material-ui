@@ -1,4 +1,4 @@
-import Style from './styles/index.css'
+import './styles/index.css'
 
 import Header from './components/header'
 import Sidebar from './components/sidebar'
