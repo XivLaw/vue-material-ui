@@ -7,7 +7,7 @@
     </div>
     <div class="mt-logo">
       <router-link to="/">
-          {{logoStr}}
+        {{logoStr}}
       </router-link>
     </div>
   </header>

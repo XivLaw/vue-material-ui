@@ -1,8 +1,10 @@
 <template>
-  <li class="mt-option" :class="{'selected': isSelected}">
+  <li class="mt-option" :class="{'selected': selected}" v-show="isShow" @click="click">
     <a>
-      <span class="mt-option-text">{{ text }}</span>
-      <span v-show="isSelected" class="glyphicon glyphicon-ok mt-option-check"></span>
+      <span class="mt-option-text">
+        <slot></slot>
+      </span>
+      <span v-show="selected" class="glyphicon glyphicon-ok mt-option-check"></span>
     </a>
   </li>
 </template>
@@ -15,22 +17,32 @@
         value: {
           required: true
         },
-        text: [String, Number],
+        selected: {
+          type: Boolean,
+          default: false
+        },
         disabled: {
           type: Boolean,
           default: false
-        }
+        },
+        isShow: true
       }
     },
-    computed: {
-      isSelected() {
-        return true;
+    methods: {
+      click() {
+      },
+      changeShow(str) {
+        if(this.$el.textContent.indexOf(str) > -1) {
+          this.isShow = true;
+        }else {
+          this.isShow = false;
+        }
       }
     }
   }
 </script>
 
-<style scoped>
+<style>
   .mt-option {
     position: relative;
   }
@@ -58,6 +70,12 @@
     text-decoration: none;
     outline: 0;
     background-color: rgba(0,0,0,.075);
+  }
+  .mt-option.disabled a{
+    cursor: not-allowed;
+  }
+  .mt-option.disabled a, .mt-option.disabled a:focus, .mt-option.disabled a:hover {
+    color: #e4e4e4;
   }
   .mt-option-text {
     display: inline-block;

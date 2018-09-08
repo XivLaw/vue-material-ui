@@ -15,6 +15,7 @@ import Radio from './components/radio'
 import RadioGroup from './components/radio-group'
 import Alert from './components/alert'
 import Dialog from './components/dialog'
+import Option from './components/select/src/option'
 
 const components = {
     Header,
@@ -31,7 +32,8 @@ const components = {
     Radio,
     RadioGroup,
     Alert,
-    Dialog
+    Dialog,
+    Option
 }
 
 //组件注册方法
