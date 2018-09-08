@@ -1,5 +1,5 @@
 <template>
-  <li class="mt-option" :class="{'selected': selected}" v-show="isShow" @click="click">
+  <li class="mt-option" :class="{'selected': selected}" v-show="isShow" @click="handleClick">
     <a>
       <span class="mt-option-text">
         <slot></slot>
@@ -29,7 +29,15 @@
       }
     },
     methods: {
-      click() {
+      handleClick() {
+        this.$dispatch('MtSelect', 'handleChange', this.value);
+      },
+      handleChange(val) {
+        if(val == this.value) {
+          this.selected = true;
+        }else{
+          this.selected = false;
+        }
       },
       changeShow(str) {
         if(this.$el.textContent.indexOf(str) > -1) {
