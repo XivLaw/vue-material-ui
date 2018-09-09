@@ -169,28 +169,28 @@
   -webkit-transition-duration: 250ms;
   transition-duration: 250ms;
 }
-.mt-sub-menu>a:after{
+.mt-sub-menu>span>a:after{
   content: "\f273";
   -webkit-transform: scale(0);
   -ms-transform: scale(0);
   -o-transform: scale(0);
   transform: scale(0);
 }
-.mt-sub-menu>a:before{
+.mt-sub-menu>span>a:before{
   content: "\f278";
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
   -o-transform: scale(1);
   transform: scale(1);
 }
-.mt-sub-menu.open>a:after {
+.mt-sub-menu.open>span>a:after {
   content: "\f273";
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
   -o-transform: scale(1);
   transform: scale(1);
 }
-.mt-sub-menu.open>a:before {
+.mt-sub-menu.open>span>a:before {
   content: "\f278";
   -webkit-transform: scale(0);
   -ms-transform: scale(0);

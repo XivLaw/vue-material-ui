@@ -1,8 +1,6 @@
 import './styles/index.css'
 
-import Header from './components/header'
-import Sidebar from './components/sidebar'
-import Main from './components/main'
+import Admin from './components/admin'
 import Card from './components/card'
 import table from './components/table'
 import Input from './components/input'
@@ -18,9 +16,7 @@ import Dialog from './components/dialog'
 import Option from './components/select/src/option'
 
 const components = {
-    Header,
-    Sidebar,
-    Main,
+    Admin,
     Card,
     table,
     Input,

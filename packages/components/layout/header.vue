@@ -1,6 +1,6 @@
 <template>
   <header id="header">
-    <div class="mt-burger" :class="{'mt-burger-click':burgerOpen}"  @click="burgerClick">
+    <div class="mt-burger" :class="{'mt-burger-click': open}"  @click="burgerClick">
       <span class="mt-line-top"></span>
       <span class="mt-line-center"></span>
       <span class="mt-line-bottom"></span>
@@ -16,30 +16,19 @@
 <script>
 export default {
   name: "MtHeader",
-  data() {
-    return {
-      burgerOpen: false
-    };
-  },
   props: {
     logoStr: {
       required: true,
       type: String
+    },
+    open: {
+      required: true,
+      type: Boolean
     }
   },
   methods: {
     burgerClick() {
-      this.burgerOpen = !this.burgerOpen;
-    }
-  },
-  watch: {
-    burgerOpen(curVal, oldVal) {
-      let el = document.querySelector("#sidebar");
-      if (curVal && el) {
-        el.classList.add("sidebar-show");
-      } else {
-        el.classList.remove("sidebar-show");
-      }
+      this.$parent.handleBurger(!this.open);
     }
   }
 };

@@ -1,5 +1,5 @@
 <template>
-  <section id="main">
+  <section id="main" @click="handleClick">
     <div class="mt-container clearfix">
       <div class="mt-block-header">
         <h2>{{title}}</h2>
@@ -17,6 +17,11 @@
         required: true,
         type: String
       }
-    }
+    },
+    methods: {
+      handleClick() {
+        this.$parent.handleBurger(false);
+      }
+    },
   }
 </script>
