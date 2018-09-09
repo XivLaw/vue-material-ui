@@ -5,7 +5,7 @@
 </template>
 
 <script>
-  import MtInput from '@/components/input/';
+  import MtInput from 'mt-admin/components/input/';
 
   export default {
     name: 'MtSelect',

@@ -1,5 +1,5 @@
 <template>
-  <li class="mt-option" :class="{'selected': selected}" v-show="isShow" @click="handleClick">
+  <li class="mt-option" :class="{'selected': isChoice, 'disabled': isDisabled}" v-show="isShow" @click="handleClick">
     <a>
       <span class="mt-option-text">
         <slot></slot>
@@ -10,27 +10,38 @@
 </template>
 
 <script>
+  import Emitter from 'mt-admin/mixins/emitter';
+
   export default {
     name: 'MtOption',
+    mixins: [Emitter],
     data() {
       return {
-        value: {
-          required: true
-        },
-        selected: {
-          type: Boolean,
-          default: false
-        },
-        disabled: {
-          type: Boolean,
-          default: false
-        },
+        groupDisabled: false,
+        isChoice: false,
         isShow: true
       }
     },
+    props: {
+      value: {
+        required: true
+      },
+      selected: {
+        type: Boolean,
+        default: false
+      },
+      disabled: {
+        type: Boolean,
+        default: false
+      }
+    },
+    mounted() {
+      this.isChoice = this.selected;
+      this.$on('handleGroupDisabled', this.handleGroupDisabled);
+    },
     methods: {
       handleClick() {
-        this.$dispatch('MtSelect', 'handleChange', this.value);
+        
       },
       handleChange(val) {
         if(val == this.value) {
@@ -39,13 +50,21 @@
           this.selected = false;
         }
       },
-      changeShow(str) {
-        if(this.$el.textContent.indexOf(str) > -1) {
+      handleGroupDisabled(val) {
+        this.groupDisabled = val;
+      },
+      changeShow(val) {
+        if(this.$el.textContent.indexOf(val) > -1) {
           this.isShow = true;
         }else {
           this.isShow = false;
         }
       }
+    },
+    computed: {
+      isDisabled() {
+        return this.disabled || this.groupDisabled;
+      },
     }
   }
 </script>
