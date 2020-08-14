@@ -6,6 +6,9 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build"
   },
+  "main": {
+    "./packages/index.js"
+  },
   "dependencies": {
     "material-design-iconic-font": "^2.2.0",
     "vue": "^2.6.11",
