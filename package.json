@@ -2,14 +2,17 @@
   "name": "vue-material-admin",
   "version": "0.1.0",
   "author": "XivLaw",
-  "private": true,
+  "private": false,
+  "main": "lib/material-ui.umd.min.js",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "build:lib": "vue-cli-service build --target lib --name material-ui --dest lib packages/index.js",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "material-design-iconic-font": "^2.2.0",
     "vue": "^2.6.11"
   },
   "devDependencies": {

@@ -4,6 +4,7 @@ function resolve (dir) {
 }
 module.exports = {
   lintOnSave: true,
+  productionSourceMap: false,
   chainWebpack: (config) => {
     config.resolve.alias
       .set('mt-admin', resolve('packages'));
