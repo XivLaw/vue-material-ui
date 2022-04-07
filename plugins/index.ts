@@ -1,6 +1,17 @@
-import type { Plugin } from 'vite';
+import type { Plugin } from 'vite'
 
 export default (...arg): Plugin => {
-  console.log(arg, 111111111111111);
-  return { name: null }
+  return { 
+    name: 'vueToDoc',
+    async transform(code, id) {
+      if (id.endsWith('HelloWorld.vue')) {
+        let docs = code.match(/(?<=<docs>)([\s\S]*)(?=<\/docs>)/)
+        console.log(code, id)
+        return {
+          code,
+          map: null
+        }
+      }
+    }
+  }
 }
