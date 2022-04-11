@@ -3,10 +3,10 @@ import type { Plugin } from 'vite'
 export default (...arg): Plugin => {
   return { 
     name: 'vueToDoc',
-    async transform(code, id) {
+    transform(code, id) {
       if (id.endsWith('HelloWorld.vue')) {
         let docs = code.match(/(?<=<docs>)([\s\S]*)(?=<\/docs>)/)
-        console.log(code, id)
+        console.log(docs, id)
         return {
           code,
           map: null
