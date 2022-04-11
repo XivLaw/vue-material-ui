@@ -6,7 +6,8 @@ defineProps<{ msg: string }>()
 const count = ref(0)
 </script>
 
-<docs>11111
+<docs>
+11111
 asdasd
 asdasd
 </docs>

@@ -2,10 +2,10 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
 const routes = [
-  // {
-  //   path: 'docs',
-  //   component: () => import('../docs/docs.md'),
-  // }
+  {
+    path: '/docs',
+    component: () => import('../docs/docs.md'),
+  }
 ]
 
 export default createRouter({
