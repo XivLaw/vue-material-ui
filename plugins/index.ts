@@ -6,9 +6,8 @@ export default (...arg): Plugin => {
     transform(code, id) {
       if (id.endsWith('HelloWorld.vue')) {
         let docs = code.match(/(?<=<docs>)([\s\S]*)(?=<\/docs>)/)
-        console.log(docs, id)
         return {
-          code,
+          code: code.replace(/<docs>[\s\S]*<\/docs>/, ''),
           map: null
         }
       }
