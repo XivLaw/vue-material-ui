@@ -3,7 +3,8 @@ import type { Plugin } from 'vite'
 
 const md = MarkdownIt({
   html: true,
-  linkify: true
+  linkify: true,
+  breaks: true
 })
 
 export default (...arg): Plugin => {
@@ -11,8 +12,9 @@ export default (...arg): Plugin => {
     name: 'mdToVue',
     transform(code, id) {
       if (id.endsWith('.md')) {
+        console.log(md.render(code))
         return {
-          code: md.render(code),
+          code: `<template>${md.render(code)}</template>`,
           map: null
         }
       }
