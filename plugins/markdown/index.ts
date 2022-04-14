@@ -1,11 +1,12 @@
 import MarkdownIt from 'markdown-it'
 import type { Plugin } from 'vite'
+import Title from './plugins/title'
 
 const md = MarkdownIt({
   html: true,
   linkify: true,
   breaks: true
-})
+}).use(Title)
 
 export default (...arg): Plugin => {
   return { 
