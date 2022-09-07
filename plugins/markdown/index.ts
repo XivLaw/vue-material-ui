@@ -1,8 +1,10 @@
 import MarkdownIt from 'markdown-it'
 import type { Plugin } from 'vite'
+import { highlight } from './plugins/highlight'
 import Title from './plugins/title'
 
 const md = MarkdownIt({
+  highlight,
   html: true,
   linkify: true,
   breaks: true

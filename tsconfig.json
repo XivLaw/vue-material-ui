@@ -13,5 +13,6 @@
   },
   "include": [
     "/node_modules/vue/macros-global.d.ts"
-  ]
+  ],
+  "exclude": []
 }
