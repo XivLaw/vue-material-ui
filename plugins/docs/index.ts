@@ -1,13 +1,22 @@
 import type { Plugin } from 'vite'
+import getCode from '../utils/getCode'
 
-export default (...arg): Plugin => {
+export default (options): Plugin => {
   return { 
     name: 'vueToDoc',
     transform(code, id) {
       if (id.endsWith('.vue')) {
-        let docs = code.match(/(?<=<docs>)([\s\S]*)(?=<\/docs>)/)
+        const { script, template, style, docs } = getCode(code)
+        const content = `${docs}
+\`\`\`vue
+${template}
+${script}
+${style}
+\`\`\`
+`;
+console.log(content)
         return {
-          code: code.replace(/<docs>[\s\S]*<\/docs>/, ''),
+          code: '',
           map: null
         }
       }
